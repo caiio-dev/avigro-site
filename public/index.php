@@ -1,11 +1,14 @@
 <?php
 
 require_once __DIR__ . '/../app/Core/Router.php';
+require_once __DIR__ . '/../app/Controllers/HomeController.php';
 
 $router = new Router();
 
-$router->get('/', function () {
-    echo "AVIGRO - MVC funcionando!";
+$homeController = new HomeController();
+
+$router->get('/', function () use ($homeController) {
+    $homeController->index();
 });
 
 $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
