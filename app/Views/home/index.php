@@ -1,19 +1,23 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+<?php
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+$title = 'AVIGRO | Início';
 
-    <title>AVIGRO</title>
-</head>
+ob_start();
 
-<body>
+?>
 
-    <h1>AVIGRO</h1>
+<?php require_once __DIR__ . '/sections/hero.php'; ?>
 
-    <p>Novo portal institucional.</p>
+<?php require_once __DIR__ . '/sections/about.php'; ?>
 
-</body>
+<?php require_once __DIR__ . '/sections/stats.php'; ?>
 
-</html>
+<?php require_once __DIR__ . '/sections/differentials.php'; ?>
+
+<?php require_once __DIR__ . '/sections/chicken-map.php'; ?>
+
+<?php
+
+$content = ob_get_clean();
+
+require_once __DIR__ . '/../layouts/main.php';

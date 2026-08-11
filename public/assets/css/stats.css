@@ -1,0 +1,115 @@
+/* ========================================
+   STATS
+======================================== */
+
+.stats {
+    padding: 110px 0;
+
+    background: #1A607E;
+
+    color: #FFFFFF;
+}
+
+
+.stats-header {
+    margin-bottom: 70px;
+
+    max-width: 700px;
+}
+
+
+.stats-header span {
+    display: inline-block;
+
+    margin-bottom: 18px;
+
+    color: #F5CD58;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+
+.stats-header h2 {
+    margin: 0;
+
+    font-size: clamp(38px, 4vw, 58px);
+
+    line-height: 1.1;
+
+    font-weight: 700;
+}
+
+
+.stats-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 30px;
+}
+
+
+.stat-item {
+    padding: 35px 20px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+
+.stat-item strong {
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: #F5CD58;
+
+    font-size: clamp(42px, 5vw, 64px);
+
+    line-height: 1;
+
+    font-weight: 700;
+}
+
+
+.stat-item span {
+    font-size: 16px;
+
+    opacity: 0.9;
+}
+
+
+/* ========================================
+   RESPONSIVO
+======================================== */
+
+@media (max-width: 900px) {
+
+    .stats {
+        padding: 80px 0;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .stats {
+        padding: 60px 0;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stats-header {
+        margin-bottom: 40px;
+    }
+
+}

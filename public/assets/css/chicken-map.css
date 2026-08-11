@@ -1,0 +1,756 @@
+/* ========================================
+   CHICKEN MAP
+======================================== */
+
+.chicken-map {
+    padding: 120px 0 90px;
+    background: #EEEDEB;
+    overflow: hidden;
+}
+
+
+/* ========================================
+   CONTAINER
+======================================== */
+
+.chicken-map .container {
+    width: min(1200px, 90%);
+    margin: 0 auto;
+}
+
+
+/* ========================================
+   CABEÇALHO
+======================================== */
+
+.chicken-map-header {
+    max-width: 760px;
+    margin: 0 auto 65px;
+    text-align: center;
+}
+
+.chicken-map-header .section-label {
+    display: inline-block;
+    margin-bottom: 18px;
+
+    color: #EB1E25;
+
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.chicken-map-header h2 {
+    margin: 0 0 20px;
+
+    color: #1A607E;
+
+    font-size: clamp(40px, 5vw, 64px);
+    line-height: 1.05;
+    font-weight: 800;
+}
+
+.chicken-map-header p {
+    margin: 0;
+
+    color: #555;
+
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+
+/* ========================================
+   ÁREA PRINCIPAL
+======================================== */
+
+.chicken-map-content {
+    display: grid;
+
+    grid-template-columns: 1.1fr 0.9fr;
+
+    align-items: center;
+
+    gap: 60px;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+}
+
+
+/* ========================================
+   ÁREA DO FRANGO
+======================================== */
+
+.chicken-illustration {
+    position: relative;
+
+    min-height: 600px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Círculo amarelo atrás */
+
+.chicken-illustration::before {
+    content: "";
+
+    position: absolute;
+
+    width: 520px;
+    height: 520px;
+
+    border-radius: 50%;
+
+    background: #F5CD58;
+
+    opacity: 0.35;
+
+    z-index: 0;
+}
+
+
+/* ========================================
+   IMAGEM DO FRANGO
+======================================== */
+
+.chicken-image-wrapper {
+    position: relative;
+
+    z-index: 2;
+
+    width: 470px;
+    height: 540px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.chicken-image {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    position: relative;
+    z-index: 2;
+
+    transition: transform 0.5s ease;
+}
+
+.chicken-image-wrapper:hover .chicken-image {
+    transform: scale(1.02);
+}
+
+
+/* ========================================
+   PONTOS DOS CORTES
+======================================== */
+
+.cut-point {
+    position: absolute;
+
+    z-index: 10;
+
+    min-width: 125px;
+
+    padding: 13px 25px;
+
+    border: none;
+    border-radius: 40px;
+
+    font-family: inherit;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.cut-point:hover,
+.cut-point:focus-visible {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+
+/* ========================================
+   PEITO
+======================================== */
+
+.cut-breast {
+    top: 25px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    background: #EB1E25;
+    color: #FFFFFF;
+}
+
+.cut-breast:hover,
+.cut-breast:focus-visible {
+    transform: translateX(-50%) scale(1.08);
+}
+
+
+/* ========================================
+   ASA
+======================================== */
+
+.cut-wing {
+    top: 185px;
+    left: 15px;
+
+    background: #F5CD58;
+    color: #1A607E;
+}
+
+.cut-wing:hover,
+.cut-wing:focus-visible {
+    transform: scale(1.08);
+}
+
+
+/* ========================================
+   SOBRECOXA
+======================================== */
+
+.cut-thigh {
+    bottom: 175px;
+    left: 20px;
+
+    background: #1A607E;
+    color: #FFFFFF;
+}
+
+.cut-thigh:hover,
+.cut-thigh:focus-visible {
+    transform: scale(1.08);
+}
+
+
+/* ========================================
+   COXA
+======================================== */
+
+.cut-leg {
+    bottom: 45px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    background: #EB1E25;
+    color: #FFFFFF;
+}
+
+.cut-leg:hover,
+.cut-leg:focus-visible {
+    transform: translateX(-50%) scale(1.08);
+}
+
+
+/* ========================================
+   LINHAS DOS PONTOS
+======================================== */
+
+.cut-point::after {
+    content: "";
+
+    position: absolute;
+
+    width: 55px;
+    height: 2px;
+
+    background: currentColor;
+
+    opacity: 0.7;
+
+    pointer-events: none;
+}
+
+
+/* Peito - linha para baixo */
+
+.cut-breast::after {
+    top: 100%;
+    left: 50%;
+
+    width: 2px;
+    height: 105px;
+
+    transform: translateX(-50%);
+}
+
+
+/* Asa - linha para direita */
+
+.cut-wing::after {
+    top: 50%;
+    left: 100%;
+
+    width: 60px;
+    height: 2px;
+
+    transform: rotate(28deg);
+
+    transform-origin: left center;
+}
+
+
+/* Sobrecoxa - linha para direita */
+
+.cut-thigh::after {
+    top: 50%;
+    left: 100%;
+
+    width: 65px;
+    height: 2px;
+
+    transform: rotate(20deg);
+
+    transform-origin: left center;
+}
+
+
+/* Coxa - linha para cima */
+
+.cut-leg::after {
+    bottom: 100%;
+    left: 50%;
+
+    width: 2px;
+    height: 75px;
+
+    transform: translateX(-50%);
+}
+
+
+/* ========================================
+   PAINEL DE INFORMAÇÕES
+======================================== */
+
+.cut-information {
+    padding: 45px;
+
+    background: #FFFFFF;
+
+    border-radius: 22px;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.08);
+}
+
+.cut-information-label {
+    display: block;
+
+    margin-bottom: 12px;
+
+    color: #EB1E25;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.cut-information h3 {
+    margin: 0 0 20px;
+
+    color: #1A607E;
+
+    font-size: 36px;
+    line-height: 1.1;
+    font-weight: 800;
+}
+
+.cut-information > p {
+    margin: 0 0 30px;
+
+    color: #555;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+}
+
+
+/* ========================================
+   CARACTERÍSTICAS
+======================================== */
+
+.cut-features {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 22px;
+
+    margin-bottom: 30px;
+}
+
+.cut-feature {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+}
+
+.cut-feature-icon {
+    flex-shrink: 0;
+
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #EEEDEB;
+
+    color: #1A607E;
+
+    font-size: 19px;
+}
+
+.cut-feature strong {
+    display: block;
+
+    margin-bottom: 3px;
+
+    color: #1A607E;
+
+    font-size: 16px;
+}
+
+.cut-feature span {
+    display: block;
+
+    color: #666;
+
+    font-size: 14px;
+}
+
+
+/* ========================================
+   BOTÃO
+======================================== */
+
+.cut-information .btn {
+    display: inline-block;
+
+    padding: 14px 30px;
+
+    border-radius: 30px;
+
+    background: #EB1E25;
+
+    color: #FFFFFF;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+.cut-information .btn:hover {
+    background: #1A607E;
+
+    transform: translateY(-3px);
+}
+
+
+/* ========================================
+   PRINCIPAIS CORTES
+======================================== */
+
+.main-cuts {
+    display: grid;
+
+    grid-template-columns: 1.1fr repeat(5, 1fr);
+
+    gap: 15px;
+
+    margin-top: 60px;
+
+    padding: 25px;
+
+    background: #FFFFFF;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+
+/* Título */
+
+.main-cuts-title {
+    display: flex;
+
+    align-items: center;
+
+    color: #1A607E;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+.main-cuts-title span {
+    position: relative;
+
+    padding-bottom: 12px;
+}
+
+.main-cuts-title span::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 90px;
+    height: 4px;
+
+    background: #EB1E25;
+
+    border-radius: 10px;
+}
+
+
+/* ========================================
+   CARDS
+======================================== */
+
+.cut-card {
+    padding: 12px;
+
+    border: 2px solid transparent;
+
+    border-radius: 14px;
+
+    background: #FFFFFF;
+
+    font-family: inherit;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.cut-card:hover,
+.cut-card.active {
+    border-color: #EB1E25;
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+
+/* ========================================
+   IMAGEM DOS CARDS
+======================================== */
+
+.cut-card-image {
+    height: 100px;
+
+    margin-bottom: 10px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    border-radius: 10px;
+
+    background: #EEEDEB;
+}
+
+.cut-card-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    transition: transform 0.35s ease;
+}
+
+.cut-card:hover .cut-card-image img,
+.cut-card.active .cut-card-image img {
+    transform: scale(1.08);
+}
+
+
+/* Nome */
+
+.cut-card strong {
+    display: block;
+
+    color: #1A607E;
+
+    font-size: 14px;
+}
+
+
+/* ========================================
+   RESPONSIVO — TABLET
+======================================== */
+
+@media (max-width: 1000px) {
+
+    .chicken-map-content {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+    .chicken-illustration {
+        min-height: 620px;
+    }
+
+    .cut-information {
+        max-width: 700px;
+
+        width: 100%;
+
+        margin: 0 auto;
+    }
+
+    .main-cuts {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .main-cuts-title {
+        grid-column: 1 / -1;
+    }
+
+}
+
+
+/* ========================================
+   RESPONSIVO — CELULAR
+======================================== */
+
+@media (max-width: 600px) {
+
+    .chicken-map {
+        padding: 75px 0;
+    }
+
+    .chicken-map-header {
+        margin-bottom: 40px;
+    }
+
+    .chicken-map-header h2 {
+        font-size: 38px;
+    }
+
+    .chicken-map-header p {
+        font-size: 15px;
+    }
+
+
+    /* Área do frango */
+
+    .chicken-illustration {
+        min-height: 480px;
+    }
+
+    .chicken-illustration::before {
+        width: 350px;
+        height: 350px;
+    }
+
+    .chicken-image-wrapper {
+        width: 290px;
+        height: 370px;
+    }
+
+
+    /* Pontos */
+
+    .cut-point {
+        min-width: 90px;
+
+        padding: 10px 15px;
+
+        font-size: 12px;
+    }
+
+    .cut-breast {
+        top: 5px;
+    }
+
+    .cut-wing {
+        top: 135px;
+        left: 0;
+    }
+
+    .cut-thigh {
+        bottom: 115px;
+        left: 0;
+    }
+
+    .cut-leg {
+        bottom: 20px;
+    }
+
+
+    /* Painel */
+
+    .cut-information {
+        padding: 30px 22px;
+    }
+
+    .cut-information h3 {
+        font-size: 30px;
+    }
+
+
+    /* Cards */
+
+    .main-cuts {
+        grid-template-columns: repeat(2, 1fr);
+
+        padding: 15px;
+    }
+
+    .main-cuts-title {
+        grid-column: 1 / -1;
+    }
+
+    .cut-card-image {
+        height: 85px;
+    }
+
+}
