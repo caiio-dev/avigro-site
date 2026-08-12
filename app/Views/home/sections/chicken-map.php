@@ -35,8 +35,7 @@
                     <img
                         src="/Site_Avigro_MVC/public/assets/images/frango.png"
                         alt="Frango AVIGRO"
-                        class="chicken-image"
-                    >
+                        class="chicken-image">
 
                 </div>
 
@@ -47,44 +46,64 @@
                     type="button"
                     class="cut-point cut-breast"
                     data-cut="breast"
-                    aria-label="Peito de frango"
-                >
+                    aria-label="Peito de frango">
                     <span>Peito</span>
                 </button>
 
 
-                <!-- Asa -->
+                <!-- ASA ESQUERDA -->
 
                 <button
-                    type="button"
-                    class="cut-point cut-wing"
+                    class="cut-point cut-wing cut-wing-left"
                     data-cut="wing"
-                    aria-label="Asa de frango"
-                >
+                    aria-label="Asa esquerda">
+                    <span>Asa</span>
+                </button>
+
+                <!-- ASA DIREITA -->
+
+                <button
+                    class="cut-point cut-wing cut-wing-right"
+                    data-cut="wing"
+                    aria-label="Asa direita">
                     <span>Asa</span>
                 </button>
 
 
-                <!-- Sobrecoxa -->
+                <!-- SOBRECOXA ESQUERDA -->
 
                 <button
-                    type="button"
-                    class="cut-point cut-thigh"
+                    class="cut-point cut-thigh cut-thigh-left"
                     data-cut="thigh"
-                    aria-label="Sobrecoxa"
-                >
+                    aria-label="Sobrecoxa esquerda">
+                    <span>Sobrecoxa</span>
+                </button>
+
+                <!-- SOBRECOXA DIREITA -->
+
+                <button
+                    class="cut-point cut-thigh cut-thigh-right"
+                    data-cut="thigh"
+                    aria-label="Sobrecoxa direita">
                     <span>Sobrecoxa</span>
                 </button>
 
 
-                <!-- Coxa -->
+                <!-- COXA ESQUERDA -->
 
                 <button
-                    type="button"
-                    class="cut-point cut-leg"
+                    class="cut-point cut-leg cut-leg-left"
                     data-cut="leg"
-                    aria-label="Coxa de frango"
-                >
+                    aria-label="Coxa esquerda">
+                    <span>Coxa</span>
+                </button>
+
+                <!-- COXA DIREITA -->
+
+                <button
+                    class="cut-point cut-leg cut-leg-right"
+                    data-cut="leg"
+                    aria-label="Coxa direita">
                     <span>Coxa</span>
                 </button>
 
@@ -166,8 +185,7 @@
 
                 <a
                     href="#produtos"
-                    class="btn btn-primary"
-                >
+                    class="btn btn-primary">
                     Ver produtos
                 </a>
 
@@ -195,15 +213,13 @@
             <button
                 type="button"
                 class="cut-card active"
-                data-cut="breast"
-            >
+                data-cut="breast">
 
                 <div class="cut-card-image">
 
                     <img
                         src="/Site_Avigro_MVC/public/assets/images/cortes/peito.png"
-                        alt="Peito de frango"
-                    >
+                        alt="Peito de frango">
 
                 </div>
 
@@ -219,15 +235,13 @@
             <button
                 type="button"
                 class="cut-card"
-                data-cut="wing"
-            >
+                data-cut="wing">
 
                 <div class="cut-card-image">
 
                     <img
                         src="/Site_Avigro_MVC/public/assets/images/cortes/asa.png"
-                        alt="Asa de frango"
-                    >
+                        alt="Asa de frango">
 
                 </div>
 
@@ -243,15 +257,13 @@
             <button
                 type="button"
                 class="cut-card"
-                data-cut="thigh"
-            >
+                data-cut="thigh">
 
                 <div class="cut-card-image">
 
                     <img
                         src="/Site_Avigro_MVC/public/assets/images/cortes/sobrecoxa.png"
-                        alt="Sobrecoxa de frango"
-                    >
+                        alt="Sobrecoxa de frango">
 
                 </div>
 
@@ -267,15 +279,13 @@
             <button
                 type="button"
                 class="cut-card"
-                data-cut="leg"
-            >
+                data-cut="leg">
 
                 <div class="cut-card-image">
 
                     <img
                         src="/Site_Avigro_MVC/public/assets/images/cortes/coxa.png"
-                        alt="Coxa de frango"
-                    >
+                        alt="Coxa de frango">
 
                 </div>
 
@@ -291,15 +301,13 @@
             <button
                 type="button"
                 class="cut-card"
-                data-cut="carcass"
-            >
+                data-cut="carcass">
 
                 <div class="cut-card-image">
 
                     <img
                         src="/Site_Avigro_MVC/public/assets/images/cortes/carcaca.png"
-                        alt="Carcaça de frango"
-                    >
+                        alt="Carcaça de frango">
 
                 </div>
 
