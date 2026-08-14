@@ -16,6 +16,10 @@ ob_start();
 
 <?php require_once __DIR__ . '/sections/chicken-map.php'; ?>
 
+<?php require_once __DIR__ . '/sections/receitas.php'; ?>
+
+
+
 <?php
 
 $content = ob_get_clean();

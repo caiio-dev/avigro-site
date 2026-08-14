@@ -43,7 +43,8 @@
 .chicken-map-header h2 {
     margin: 0 0 20px;
 
-    color: #1A607E;
+    color: #EB1E25;
+    
 
     font-size: clamp(40px, 5vw, 64px);
     line-height: 1.05;

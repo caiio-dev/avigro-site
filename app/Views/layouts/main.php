@@ -37,6 +37,10 @@
 
     <link rel="stylesheet" href="/Site_Avigro_MVC/public/assets/css/chicken-map.css">
 
+        <link rel="stylesheet" href="/Site_Avigro_MVC/public/assets/css/receitas.css">
+
+
+
     <!-- Font Awesome -->
 
     <link
@@ -66,6 +70,7 @@
     <!-- JavaScript -->
 
 <script src="/Site_Avigro_MVC/public/assets/js/chicken-map.js?v=2"></script>
+<script src="/Site_Avigro_MVC/public/assets/js/navbar.js"></script>
 
 </body>
 
