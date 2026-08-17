@@ -138,3 +138,34 @@ h4 {
     line-height: 1.2;
 
 }
+
+/* ========================================
+   LABELS DAS SEÇÕES
+======================================== */
+
+.section-label,
+.about-label,
+.differentials-label,
+.products-label,
+.recipes-label {
+
+    color: var(--avigro-red);
+
+    transition: color 0.3s ease;
+
+}
+
+
+/* ========================================
+   HOVER
+======================================== */
+
+.section-label:hover,
+.about-label:hover,
+.differentials-label:hover,
+.products-label:hover,
+.recipes-label:hover {
+
+    color: var(--avigro-yellow);
+
+}

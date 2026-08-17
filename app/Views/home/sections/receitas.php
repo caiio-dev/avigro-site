@@ -26,10 +26,12 @@
 
                 <div class="recipe-image">
 
-                    <img
-                        src="/Site_Avigro_MVC/public/assets/images/receita1.jpg"
-                        alt="Receita Avigro"
-                    >
+                    <video
+                        src="/Site_Avigro_MVC/public/assets/videos/coxinha.mp4"
+                        autoplay
+                        muted
+                        loop
+                        playsinline></video>
 
                 </div>
 
@@ -40,7 +42,7 @@
                     </span>
 
                     <h3>
-                        Receita de Frango
+                        Coxinha na brasa com Barbecue
                     </h3>
 
                     <p>
@@ -60,10 +62,12 @@
 
                 <div class="recipe-image">
 
-                    <img
-                        src="/Site_Avigro_MVC/public/assets/images/receita2.jpg"
-                        alt="Receita Avigro"
-                    >
+                    <video
+                        src="/Site_Avigro_MVC/public/assets/videos/pãoliça.mp4"
+                        autoplay
+                        muted
+                        loop
+                        playsinline></video>
 
                 </div>
 
@@ -74,7 +78,7 @@
                     </span>
 
                     <h3>
-                        Frango Assado
+                        Pãoliça
                     </h3>
 
                     <p>
@@ -94,10 +98,12 @@
 
                 <div class="recipe-image">
 
-                    <img
-                        src="/Site_Avigro_MVC/public/assets/images/receita3.jpg"
-                        alt="Receita Avigro"
-                    >
+                    <video
+                        src="/Site_Avigro_MVC/public/assets/videos/sobrecoxa.mp4"
+                        autoplay
+                        muted
+                        loop
+                        playsinline></video>
 
                 </div>
 
@@ -108,7 +114,7 @@
                     </span>
 
                     <h3>
-                        Frango Crocante
+                        Sobrecoxa com queijo derretendo
                     </h3>
 
                     <p>

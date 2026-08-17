@@ -34,7 +34,7 @@
 .recipes h2 {
     margin-bottom: 20px;
 
-    color: #1A607E;
+    color: #EB1E25;
 
     font-size: clamp(38px, 4vw, 58px);
 
@@ -63,7 +63,7 @@
 .recipe-card {
     overflow: hidden;
 
-    background: #FFFFFF;
+    background: #EB1E25;
 
     border-radius: 6px;
 
@@ -81,10 +81,20 @@
 
 .recipe-image {
     width: 100%;
-
-    height: 260px;
+    height: 480px;
 
     overflow: hidden;
+
+    border-radius: 12px;
+}
+
+.recipe-image video {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
 }
 
 
@@ -125,7 +135,7 @@
 .recipe-content h3 {
     margin: 10px 0;
 
-    color: #1A607E;
+    color: #F5CD58;
 
     font-size: 24px;
 }
@@ -134,7 +144,7 @@
 .recipe-content p {
     margin-bottom: 20px;
 
-    color: #555;
+    color: #FFFFFF;
 
     font-size: 15px;
 
@@ -147,9 +157,9 @@
 
     padding: 10px 20px;
 
-    background: #EB1E25;
+    background: #FFFFFF;
 
-    color: #FFFFFF;
+    color: #EB1E25;
 
     text-decoration: none;
 
@@ -164,7 +174,7 @@
 
 
 .recipe-button:hover {
-    background: #1A607E;
+    background: #F5CD58;
 }
 
 

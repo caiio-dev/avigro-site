@@ -25,7 +25,7 @@
                 </li>
 
                 <li>
-                    <a href="#">Receitas</a>
+                    <a href="#receitas">Receitas</a>
                 </li>
 
                 <li>

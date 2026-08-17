@@ -4,6 +4,7 @@
 
 .about {
     padding: 120px 0;
+
     background: #EEEDEB;
 }
 
@@ -63,7 +64,7 @@
 
 
 /* ========================================
-   LABEL
+   LABEL — QUEM SOMOS
 ======================================== */
 
 .about-label {
@@ -78,6 +79,15 @@
     font-weight: 700;
 
     letter-spacing: 2px;
+
+    cursor: default;
+
+    transition: color 0.3s ease;
+}
+
+
+.about-label:hover {
+    color: #F5CD58;
 }
 
 
@@ -88,13 +98,22 @@
 .about h2 {
     margin: 0 0 28px;
 
-    color: #1A607E;
+    color: #EB1E25;
 
     font-size: clamp(38px, 4vw, 58px);
 
     line-height: 1.1;
 
     font-weight: 700;
+
+    cursor: default;
+
+    transition: color 0.3s ease;
+}
+
+
+.about h2:hover {
+    color: #F5CD58;
 }
 
 
@@ -141,7 +160,7 @@
 
 
 .about .btn:hover {
-    background: #1A607E;
+    background: #F5CD58;
 
     transform: translateY(-3px);
 }

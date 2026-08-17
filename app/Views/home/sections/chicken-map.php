@@ -296,7 +296,7 @@
             </button>
 
 
-            <!-- Carcaça -->
+            <!-- Frango Congelado -->
 
             <button
                 type="button"
@@ -306,13 +306,13 @@
                 <div class="cut-card-image">
 
                     <img
-                        src="/Site_Avigro_MVC/public/assets/images/cortes/carcaca.png"
+                        src="/Site_Avigro_MVC/public/assets/images/cortes/frango.png"
                         alt="Carcaça de frango">
 
                 </div>
 
                 <strong>
-                    Carcaça
+                    Frango Congelado
                 </strong>
 
             </button>
