@@ -18,6 +18,9 @@ ob_start();
 
 <?php require_once __DIR__ . '/sections/receitas.php'; ?>
 
+<?php require_once __DIR__ . '/sections/products.php'; ?>
+
+
 
 
 <?php

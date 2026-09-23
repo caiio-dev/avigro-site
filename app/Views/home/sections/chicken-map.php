@@ -6,7 +6,7 @@
         <div class="chicken-map-header">
 
             <span class="section-label">
-                NOSSOS PRODUTOS
+                NOSSO FRANGO
             </span>
 
             <h2>

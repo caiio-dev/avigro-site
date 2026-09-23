@@ -17,8 +17,7 @@
 
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet"
-    >
+        rel="stylesheet">
 
 
     <!-- CSS -->
@@ -37,7 +36,10 @@
 
     <link rel="stylesheet" href="/Site_Avigro_MVC/public/assets/css/chicken-map.css">
 
-        <link rel="stylesheet" href="/Site_Avigro_MVC/public/assets/css/receitas.css">
+    <link rel="stylesheet" href="/Site_Avigro_MVC/public/assets/css/receitas.css">
+
+    <link rel="stylesheet" href="/Site_Avigro_MVC/public/assets/css/products.css">
+
 
 
 
@@ -45,8 +47,7 @@
 
     <link
         rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-    >
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
 </head>
 
@@ -69,8 +70,9 @@
 
     <!-- JavaScript -->
 
-<script src="/Site_Avigro_MVC/public/assets/js/chicken-map.js?v=2"></script>
-<script src="/Site_Avigro_MVC/public/assets/js/navbar.js"></script>
+    <script src="/Site_Avigro_MVC/public/assets/js/chicken-map.js?v=2"></script>
+    <script src="/Site_Avigro_MVC/public/assets/js/navbar.js"></script>
+    <script src="/Site_Avigro_MVC/public/assets/js/products.js"></script>
 
 </body>
 

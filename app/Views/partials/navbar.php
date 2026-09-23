@@ -21,7 +21,7 @@
                 </li>
 
                 <li>
-                    <a href="#">Produtos</a>
+                    <a href="#produtos">Produtos</a>
                 </li>
 
                 <li>
