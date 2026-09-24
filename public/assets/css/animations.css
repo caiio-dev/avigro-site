@@ -1,0 +1,158 @@
+/* ========================================
+   ANIMAÇÕES GLOBAIS - AVIGRO
+======================================== */
+
+
+/* ========================================
+   APARECER DE BAIXO
+======================================== */
+
+.reveal {
+    opacity: 0;
+
+    transform: translateY(35px);
+
+    transition:
+        opacity 0.75s ease,
+        transform 0.75s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+/* ========================================
+   ENTRADA PELA ESQUERDA
+======================================== */
+
+.reveal-left {
+    opacity: 0;
+
+    transform: translateX(-45px);
+
+    transition:
+        opacity 0.75s ease,
+        transform 0.75s ease;
+}
+
+.reveal-left.active {
+    opacity: 1;
+
+    transform: translateX(0);
+}
+
+
+/* ========================================
+   ENTRADA PELA DIREITA
+======================================== */
+
+.reveal-right {
+    opacity: 0;
+
+    transform: translateX(45px);
+
+    transition:
+        opacity 0.75s ease,
+        transform 0.75s ease;
+}
+
+.reveal-right.active {
+    opacity: 1;
+
+    transform: translateX(0);
+}
+
+
+/* ========================================
+   ZOOM SUAVE
+======================================== */
+
+.reveal-scale {
+    opacity: 0;
+
+    transform: scale(0.94);
+
+    transition:
+        opacity 0.75s ease,
+        transform 0.75s ease;
+}
+
+.reveal-scale.active {
+    opacity: 1;
+
+    transform: scale(1);
+}
+
+
+/* ========================================
+   ENTRADA MAIS FORTE DE BAIXO
+======================================== */
+
+.reveal-up {
+    opacity: 0;
+
+    transform: translateY(55px);
+
+    transition:
+        opacity 0.85s ease,
+        transform 0.85s ease;
+}
+
+.reveal-up.active {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+/* ========================================
+   DELAYS
+======================================== */
+
+.reveal-delay-1 {
+    transition-delay: 0.10s;
+}
+
+.reveal-delay-2 {
+    transition-delay: 0.20s;
+}
+
+.reveal-delay-3 {
+    transition-delay: 0.30s;
+}
+
+.reveal-delay-4 {
+    transition-delay: 0.40s;
+}
+
+.reveal-delay-5 {
+    transition-delay: 0.50s;
+}
+
+
+/* ========================================
+   ACESSIBILIDADE
+
+   Caso o usuário tenha configurado
+   redução de movimento no sistema.
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .reveal,
+    .reveal-left,
+    .reveal-right,
+    .reveal-scale,
+    .reveal-up {
+
+        opacity: 1 !important;
+
+        transform: none !important;
+
+        transition: none !important;
+    }
+
+}

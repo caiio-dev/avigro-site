@@ -12,12 +12,10 @@
 
                 <a
                     href="/Site_Avigro_MVC/public/"
-                    class="footer-logo"
-                >
+                    class="footer-logo">
                     <img
                         src="/Site_Avigro_MVC/public/assets/images/logo.png"
-                        alt="AVIGRO"
-                    >
+                        alt="AVIGRO">
                 </a>
 
                 <p>
@@ -37,8 +35,7 @@
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label="Instagram da AVIGRO"
-                        title="Instagram"
-                    >
+                        title="Instagram">
                         <i class="fa-brands fa-instagram"></i>
                     </a>
 
@@ -72,7 +69,7 @@
                     </li>
 
                     <li>
-                        <a href="/Site_Avigro_MVC/public/#produtos">
+                        <a href="/Site_Avigro_MVC/public/index.php?route=produtos">
                             Produtos
                         </a>
                     </li>

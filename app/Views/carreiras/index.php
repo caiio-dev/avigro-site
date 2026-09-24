@@ -12,7 +12,7 @@ ob_start();
 
 <section class="careers-hero">
 
-    <div class="container">
+    <div class="container reveal">
 
         <span class="careers-label">
             TRABALHE CONOSCO
@@ -140,8 +140,7 @@ ob_start();
 
                 <a
                     href="/Site_Avigro_MVC/public/index.php?route=vaga"
-                    class="job-button"
-                >
+                    class="job-button">
                     Ver vaga
                     <i class="fa-solid fa-arrow-right"></i>
                 </a>
@@ -190,8 +189,7 @@ ob_start();
 
                 <a
                     href="/Site_Avigro_MVC/public/index.php?route=vaga"
-                    class="job-button"
-                >
+                    class="job-button">
                     Ver vaga
                     <i class="fa-solid fa-arrow-right"></i>
                 </a>
@@ -240,8 +238,7 @@ ob_start();
 
                 <a
                     href="/Site_Avigro_MVC/public/index.php?route=vaga"
-                    class="job-button"
-                >
+                    class="job-button">
                     Ver vaga
                     <i class="fa-solid fa-arrow-right"></i>
                 </a>

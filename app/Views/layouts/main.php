@@ -5,51 +5,117 @@
 
     <meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
 
-    <title><?= $title ?? 'AVIGRO' ?></title>
+    <title>
+        <?= $title ?? 'AVIGRO' ?>
+    </title>
 
 
-    <!-- Google Fonts -->
+    <!-- ========================================
+         GOOGLE FONTS
+    ======================================== -->
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
 
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
 
 
-    <!-- CSS -->
+    <!-- ========================================
+         CSS GLOBAL
+    ======================================== -->
 
-    <link rel="stylesheet" href="/Site_Avigro_MVC/public/assets/css/style.css">
+    <link
+        rel="stylesheet"
+        href="/Site_Avigro_MVC/public/assets/css/style.css">
 
-    <link rel="stylesheet" href="/Site_Avigro_MVC/public/assets/css/navbar.css">
-
-    <link rel="stylesheet" href="/Site_Avigro_MVC/public/assets/css/hero.css">
-
-    <link rel="stylesheet" href="/Site_Avigro_MVC/public/assets/css/about.css">
-
-    <link rel="stylesheet" href="/Site_Avigro_MVC/public/assets/css/empresa.css">
-
-    <link rel="stylesheet" href="/Site_Avigro_MVC/public/assets/css/stats.css">
-
-    <link rel="stylesheet" href="/Site_Avigro_MVC/public/assets/css/differentials.css">
-
-    <link rel="stylesheet" href="/Site_Avigro_MVC/public/assets/css/chicken-map.css">
-
-    <link rel="stylesheet" href="/Site_Avigro_MVC/public/assets/css/receitas.css">
-
-    <link rel="stylesheet" href="/Site_Avigro_MVC/public/assets/css/products.css">
-
-    <link rel="stylesheet" href="/Site_Avigro_MVC/public/assets/css/footer.css">
-
-    <link rel="stylesheet" href="/Site_Avigro_MVC/public/assets/css/carreiras.css">
+    <link
+        rel="stylesheet"
+        href="/Site_Avigro_MVC/public/assets/css/navbar.css">
 
 
+    <!-- ========================================
+         ANIMAÇÕES
+    ======================================== -->
+
+    <link
+        rel="stylesheet"
+        href="/Site_Avigro_MVC/public/assets/css/animations.css">
 
 
-    <!-- Font Awesome -->
+    <!-- ========================================
+         HOME
+    ======================================== -->
+
+    <link
+        rel="stylesheet"
+        href="/Site_Avigro_MVC/public/assets/css/hero.css">
+
+    <link
+        rel="stylesheet"
+        href="/Site_Avigro_MVC/public/assets/css/about.css">
+
+    <link
+        rel="stylesheet"
+        href="/Site_Avigro_MVC/public/assets/css/stats.css">
+
+    <link
+        rel="stylesheet"
+        href="/Site_Avigro_MVC/public/assets/css/differentials.css">
+
+    <link
+        rel="stylesheet"
+        href="/Site_Avigro_MVC/public/assets/css/chicken-map.css">
+
+    <link
+        rel="stylesheet"
+        href="/Site_Avigro_MVC/public/assets/css/receitas.css">
+
+    <link
+        rel="stylesheet"
+        href="/Site_Avigro_MVC/public/assets/css/products.css">
+
+
+    <!-- ========================================
+         PÁGINAS INTERNAS
+    ======================================== -->
+
+    <link
+        rel="stylesheet"
+        href="/Site_Avigro_MVC/public/assets/css/empresa.css">
+
+    <link
+        rel="stylesheet"
+        href="/Site_Avigro_MVC/public/assets/css/carreiras.css">
+
+    <link
+        rel="stylesheet"
+        href="/Site_Avigro_MVC/public/assets/css/produtos-page.css">
+
+
+    <!-- ========================================
+         FOOTER
+    ======================================== -->
+
+    <link
+        rel="stylesheet"
+        href="/Site_Avigro_MVC/public/assets/css/footer.css">
+
+
+    <!-- ========================================
+         FONT AWESOME
+    ======================================== -->
 
     <link
         rel="stylesheet"
@@ -61,8 +127,18 @@
 <body>
 
 
-    <?php require_once __DIR__ . '/../partials/navbar.php'; ?>
+    <!-- ========================================
+         NAVBAR
+    ======================================== -->
 
+    <?php
+    require_once __DIR__ . '/../partials/navbar.php';
+    ?>
+
+
+    <!-- ========================================
+         CONTEÚDO
+    ======================================== -->
 
     <main>
 
@@ -71,14 +147,39 @@
     </main>
 
 
-    <?php require_once __DIR__ . '/../partials/footer.php'; ?>
+    <!-- ========================================
+         FOOTER
+    ======================================== -->
+
+    <?php
+    require_once __DIR__ . '/../partials/footer.php';
+    ?>
 
 
-    <!-- JavaScript -->
+    <!-- ========================================
+         JAVASCRIPT
+    ======================================== -->
 
-    <script src="/Site_Avigro_MVC/public/assets/js/chicken-map.js?v=2"></script>
-    <script src="/Site_Avigro_MVC/public/assets/js/navbar.js"></script>
-    <script src="/Site_Avigro_MVC/public/assets/js/products.js"></script>
+    <script
+        src="/Site_Avigro_MVC/public/assets/js/chicken-map.js?v=2"></script>
+
+
+    <script
+        src="/Site_Avigro_MVC/public/assets/js/navbar.js"></script>
+
+
+    <script
+        src="/Site_Avigro_MVC/public/assets/js/products.js"></script>
+
+
+    <!-- ANIMAÇÕES -->
+
+    <script
+        src="/Site_Avigro_MVC/public/assets/js/animations.js"></script>
+
+    <script
+        src="/Site_Avigro_MVC/public/assets/js/produtos-page.js"></script>
+
 
 </body>
 

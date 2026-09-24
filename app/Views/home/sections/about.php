@@ -2,7 +2,7 @@
 
     <div class="container about-container">
 
-        <div class="about-image">
+        <div class="about-image reveal-left">
 
             <video
                 class="about-video"
@@ -10,10 +10,12 @@
                 muted
                 loop
                 playsinline
-                preload="metadata">
+                preload="metadata"
+            >
                 <source
                     src="/Site_Avigro_MVC/public/assets/videos/fabrica01.mp4"
-                    type="video/mp4">
+                    type="video/mp4"
+                >
 
                 Seu navegador não suporta vídeos.
             </video>
@@ -21,17 +23,19 @@
         </div>
 
 
-        <div class="about-content">
+        <div class="about-content reveal-right">
 
             <span class="about-label">
                 QUEM SOMOS
             </span>
+
 
             <h2>
                 Tradição,
                 <br>
                 qualidade e inovação.
             </h2>
+
 
             <p>
                 A AVIGRO trabalha diariamente para levar
@@ -40,6 +44,7 @@
                 em cada etapa da produção.
             </p>
 
+
             <p>
                 Nossa trajetória é construída por pessoas,
                 processos e investimentos constantes,
@@ -47,10 +52,13 @@
                 necessidades dos nossos clientes.
             </p>
 
+
             <a
                 href="/Site_Avigro_MVC/public/index.php?route=empresa"
-                class="btn btn-primary">
+                class="btn btn-primary"
+            >
                 Conheça nossa história
+
                 <i class="fa-solid fa-arrow-right"></i>
             </a>
 

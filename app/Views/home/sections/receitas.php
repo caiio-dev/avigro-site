@@ -2,7 +2,7 @@
 
     <div class="container">
 
-        <div class="recipes-header">
+        <div class="recipes-header reveal">
 
             <span class="recipes-label">
                 RECEITAS
@@ -146,8 +146,7 @@
 
             <a
                 href="/Site_Avigro_MVC/public/receitas"
-                class="recipe-more-button"
-            >
+                class="recipe-more-button">
                 Ver mais receitas
 
                 <i class="fa-solid fa-arrow-right"></i>

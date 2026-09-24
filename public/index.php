@@ -3,10 +3,18 @@
 error_reporting(E_ALL);
 ini_set('display_errors', '1');
 
+
+/* ========================================
+   ARQUIVOS PRINCIPAIS
+======================================== */
+
 require_once __DIR__ . '/../app/Core/Router.php';
+
 require_once __DIR__ . '/../app/Controllers/HomeController.php';
 require_once __DIR__ . '/../app/Controllers/EmpresaController.php';
 require_once __DIR__ . '/../app/Controllers/CarreirasController.php';
+require_once __DIR__ . '/../app/Controllers/ProdutosController.php';
+
 
 /* ========================================
    ROUTER
@@ -24,6 +32,8 @@ $homeController = new HomeController();
 $empresaController = new EmpresaController();
 
 $carreirasController = new CarreirasController();
+
+$produtosController = new ProdutosController();
 
 
 /* ========================================
@@ -58,11 +68,29 @@ $router->get('/trabalhe-conosco', function () use ($carreirasController) {
 });
 
 
-/* PÁGINA INDIVIDUAL DA VAGA */
+/* VAGA INDIVIDUAL */
 
 $router->get('/vaga', function () use ($carreirasController) {
 
     $carreirasController->vaga();
+
+});
+
+
+/* PRODUTOS */
+
+$router->get('/produtos', function () use ($produtosController) {
+
+    $produtosController->index();
+
+});
+
+
+/* PRODUTO INDIVIDUAL */
+
+$router->get('/produto', function () use ($produtosController) {
+
+    $produtosController->produto();
 
 });
 

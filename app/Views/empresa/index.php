@@ -12,7 +12,7 @@ ob_start();
 
 <section class="company-hero">
 
-    <div class="container">
+    <div class="container reveal">
 
         <span class="company-label">
             NOSSA HISTÓRIA

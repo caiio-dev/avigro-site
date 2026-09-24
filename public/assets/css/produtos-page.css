@@ -1,0 +1,673 @@
+/* ========================================
+   PÁGINA DE PRODUTOS - AVIGRO
+======================================== */
+
+
+/* ========================================
+   HERO
+======================================== */
+
+.products-page-hero {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    min-height: 520px;
+
+    padding: 150px 0 100px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #B9141B 0%,
+            #EB1E25 100%
+        );
+
+    overflow: hidden;
+}
+
+.products-page-hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 430px;
+    height: 430px;
+
+    top: -170px;
+    right: -100px;
+
+    background: rgba(245, 205, 88, 0.12);
+
+    border-radius: 50%;
+}
+
+.products-page-hero::after {
+    content: "";
+
+    position: absolute;
+
+    width: 280px;
+    height: 280px;
+
+    bottom: -150px;
+    left: -70px;
+
+    background: rgba(255, 255, 255, 0.06);
+
+    border-radius: 50%;
+}
+
+.products-page-hero .container {
+    position: relative;
+
+    z-index: 2;
+}
+
+.products-page-label {
+    display: inline-block;
+
+    margin-bottom: 15px;
+
+    color: #EB1E25;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.products-page-hero .products-page-label {
+    color: #F5CD58;
+}
+
+.products-page-hero h1 {
+    max-width: 850px;
+
+    margin: 0 0 25px;
+
+    color: #FFFFFF;
+
+    font-size: clamp(44px, 5vw, 72px);
+    font-weight: 700;
+
+    line-height: 1.08;
+}
+
+.products-page-hero p {
+    max-width: 650px;
+
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.88);
+
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+
+/* ========================================
+   CATÁLOGO
+======================================== */
+
+.products-catalog {
+    padding: 110px 0;
+
+    background: #FFFFFF;
+}
+
+.products-catalog-header {
+    max-width: 720px;
+
+    margin-bottom: 42px;
+}
+
+.products-catalog-header h2 {
+    margin: 0 0 18px;
+
+    color: #EB1E25;
+
+    font-size: clamp(38px, 4vw, 56px);
+
+    line-height: 1.1;
+}
+
+.products-catalog-header p {
+    margin: 0;
+
+    color: #666666;
+
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+
+/* ========================================
+   FILTROS
+======================================== */
+
+.products-filters {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    margin-bottom: 50px;
+}
+
+.product-filter {
+    padding: 12px 22px;
+
+    background: #EEEDEB;
+
+    color: #555555;
+
+    border: 0;
+
+    border-radius: 30px;
+
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.product-filter:hover {
+    background: #F5CD58;
+
+    color: #B9141B;
+
+    transform: translateY(-2px);
+}
+
+.product-filter.active {
+    background: #EB1E25;
+
+    color: #FFFFFF;
+
+    box-shadow:
+        0 8px 20px rgba(235, 30, 37, 0.20);
+}
+
+
+/* ========================================
+   GRID
+======================================== */
+
+.products-page-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 30px;
+
+    align-items: stretch;
+}
+
+
+/* ========================================
+   CARD
+======================================== */
+
+.product-page-card {
+    display: flex;
+    flex-direction: column;
+
+    min-width: 0;
+
+    overflow: hidden;
+
+    background: #FFFFFF;
+
+    border: 1px solid #E4E1DF;
+    border-radius: 14px;
+
+    box-shadow:
+        0 5px 18px rgba(0, 0, 0, 0.035);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease,
+        opacity 0.3s ease;
+}
+
+
+/*
+   IMPORTANTE:
+   sobrescreve o transform da animação
+   quando o card já está ativo.
+*/
+
+.product-page-card.reveal-scale.active:hover,
+.product-page-card:hover {
+    transform: translateY(-10px) scale(1.01);
+
+    border-color: #EB1E25;
+
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, 0.13);
+}
+
+
+/* ========================================
+   CARD ESCONDIDO PELO FILTRO
+======================================== */
+
+.product-page-card.is-hidden {
+    display: none;
+}
+
+
+/* ========================================
+   IMAGEM
+======================================== */
+
+.product-page-image {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 330px;
+
+    padding: 25px;
+
+    background: #EEEDEB;
+
+    box-sizing: border-box;
+
+    overflow: hidden;
+}
+
+.product-page-image img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    transition:
+        transform 0.45s ease,
+        filter 0.45s ease;
+}
+
+.product-page-card:hover .product-page-image img {
+    transform: scale(1.08);
+}
+
+
+/* ========================================
+   CONTEÚDO
+======================================== */
+
+.product-page-content {
+    display: flex;
+    flex-direction: column;
+
+    flex: 1;
+
+    padding: 27px;
+}
+
+.product-page-category {
+    display: inline-block;
+
+    margin-bottom: 10px;
+
+    color: #EB1E25;
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+}
+
+.product-page-content h3 {
+    margin: 0 0 12px;
+
+    color: #222222;
+
+    font-size: 24px;
+
+    line-height: 1.25;
+
+    transition: color 0.3s ease;
+}
+
+.product-page-card:hover
+.product-page-content h3 {
+    color: #EB1E25;
+}
+
+.product-page-content p {
+    flex: 1;
+
+    margin: 0 0 24px;
+
+    color: #666666;
+
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+/* ========================================
+   BOTÃO
+======================================== */
+
+.product-page-button {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    align-self: flex-start;
+
+    padding: 12px 20px;
+
+    background: #EB1E25;
+
+    color: #FFFFFF;
+
+    border-radius: 6px;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.product-page-button:hover {
+    background: #F5CD58;
+
+    color: #B9141B;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 18px rgba(0, 0, 0, 0.10);
+}
+
+.product-page-button i {
+    transition: transform 0.3s ease;
+}
+
+.product-page-button:hover i {
+    transform: translateX(5px);
+}
+
+
+/* ========================================
+   PÁGINA INDIVIDUAL
+======================================== */
+
+.product-detail {
+    min-height: 100vh;
+
+    padding: 150px 0 100px;
+
+    background: #EEEDEB;
+}
+
+.product-back {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 35px;
+
+    color: #EB1E25;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    text-decoration: none;
+}
+
+.product-back:hover {
+    color: #B9141B;
+}
+
+
+/* ========================================
+   GRID PRODUTO INDIVIDUAL
+======================================== */
+
+.product-detail-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 60px;
+
+    align-items: start;
+}
+
+
+/* ========================================
+   IMAGEM PRODUTO INDIVIDUAL
+======================================== */
+
+.product-detail-image {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-height: 560px;
+
+    padding: 50px;
+
+    background: #FFFFFF;
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.06);
+}
+
+.product-detail-image img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    max-height: 480px;
+
+    object-fit: contain;
+}
+
+
+/* ========================================
+   DADOS DO PRODUTO
+======================================== */
+
+.product-detail-content {
+    padding-top: 15px;
+}
+
+.product-detail-content h1 {
+    margin: 5px 0 25px;
+
+    color: #EB1E25;
+
+    font-size: clamp(40px, 4vw, 58px);
+
+    line-height: 1.1;
+}
+
+.product-detail-description {
+    margin: 0 0 35px;
+
+    color: #555555;
+
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+
+/* ========================================
+   ESPECIFICAÇÕES
+======================================== */
+
+.product-specifications {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 15px;
+}
+
+.product-spec-item {
+    padding: 20px;
+
+    background: #FFFFFF;
+
+    border-radius: 10px;
+
+    border-left: 4px solid #EB1E25;
+}
+
+.product-spec-item span {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: #888888;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+}
+
+.product-spec-item strong {
+    color: #333333;
+
+    font-size: 15px;
+
+    line-height: 1.5;
+}
+
+
+/* ========================================
+   RESPONSIVO
+======================================== */
+
+@media (max-width: 1050px) {
+
+    .products-page-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .product-detail-grid {
+        gap: 40px;
+    }
+
+}
+
+
+@media (max-width: 800px) {
+
+    .products-page-hero {
+        min-height: 430px;
+
+        padding: 130px 0 80px;
+    }
+
+    .products-catalog {
+        padding: 80px 0;
+    }
+
+    .product-detail {
+        padding: 130px 0 80px;
+    }
+
+    .product-detail-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .product-detail-image {
+        min-height: 450px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .products-page-hero {
+        min-height: auto;
+
+        padding: 120px 0 70px;
+    }
+
+    .products-page-hero h1 {
+        font-size: 40px;
+    }
+
+    .products-page-hero p {
+        font-size: 16px;
+    }
+
+    .products-catalog {
+        padding: 65px 0;
+    }
+
+    .products-filters {
+        gap: 8px;
+    }
+
+    .product-filter {
+        padding: 10px 16px;
+
+        font-size: 12px;
+    }
+
+    .products-page-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .product-page-image {
+        height: 320px;
+    }
+
+    .product-detail {
+        padding: 120px 0 65px;
+    }
+
+    .product-detail-image {
+        min-height: 350px;
+
+        padding: 30px;
+    }
+
+    .product-specifications {
+        grid-template-columns: 1fr;
+    }
+
+}

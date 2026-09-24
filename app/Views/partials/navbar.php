@@ -6,8 +6,7 @@
 
             <img
                 src="/Site_Avigro_MVC/public/assets/images/logo.png"
-                alt="AVIGRO"
-            >
+                alt="AVIGRO">
 
         </a>
 
@@ -29,7 +28,7 @@
                 </li>
 
                 <li>
-                    <a href="/Site_Avigro_MVC/public/#produtos">
+                    <a href="/Site_Avigro_MVC/public/index.php?route=produtos">
                         Produtos
                     </a>
                 </li>
@@ -56,8 +55,7 @@
                     <a
                         href="#"
                         class="navbar-boleto"
-                        title="Em breve"
-                    >
+                        title="Em breve">
                         2ª Via de Boletos
                     </a>
                 </li>
