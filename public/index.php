@@ -2,21 +2,40 @@
 
 require_once __DIR__ . '/../app/Core/Router.php';
 require_once __DIR__ . '/../app/Controllers/HomeController.php';
+require_once __DIR__ . '/../app/Controllers/EmpresaController.php';
 
 $router = new Router();
 
 $homeController = new HomeController();
+$empresaController = new EmpresaController();
+
+
+/* ========================================
+   ROTAS
+======================================== */
 
 $router->get('/', function () use ($homeController) {
     $homeController->index();
 });
 
-$uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+$router->get('/empresa', function () use ($empresaController) {
+    $empresaController->index();
+});
 
-$basePath = '/Site_Avigro_MVC/public';
 
-$uri = str_replace($basePath, '', $uri);
+/* ========================================
+   IDENTIFICA A ROTA
+======================================== */
 
-$uri = $uri ?: '/';
+$route = $_GET['route'] ?? '/';
 
-$router->dispatch($uri, $_SERVER['REQUEST_METHOD']);
+if ($route !== '/') {
+    $route = '/' . trim($route, '/');
+}
+
+
+/* ========================================
+   EXECUTA A ROTA
+======================================== */
+
+$router->dispatch($route, $_SERVER['REQUEST_METHOD']);

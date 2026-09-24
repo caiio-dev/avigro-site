@@ -5,8 +5,7 @@
         <a href="/Site_Avigro_MVC/public/" class="navbar-logo">
             <img
                 src="/Site_Avigro_MVC/public/assets/images/logo.png"
-                alt="AVIGRO"
-            >
+                alt="AVIGRO">
         </a>
 
         <nav>
@@ -17,7 +16,9 @@
                 </li>
 
                 <li>
-                    <a href="#empresa">Empresa</a>
+                    <a href="/Site_Avigro_MVC/public/index.php?route=empresa">
+                        Empresa
+                    </a>
                 </li>
 
                 <li>

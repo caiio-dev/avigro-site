@@ -22,16 +22,22 @@
 
         <div class="recipes-grid">
 
+            <!-- ========================================
+                 RECEITA 1
+            ======================================== -->
+
             <article class="recipe-card">
 
                 <div class="recipe-image">
 
                     <video
+                        class="recipe-video"
                         src="/Site_Avigro_MVC/public/assets/videos/coxinha.mp4"
-                        autoplay
-                        muted
-                        loop
-                        playsinline></video>
+                        preload="metadata"
+                        playsinline
+                        controls>
+                        Seu navegador não suporta vídeos.
+                    </video>
 
                 </div>
 
@@ -49,25 +55,27 @@
                         Uma opção saborosa e prática para o dia a dia.
                     </p>
 
-                    <a href="#" class="recipe-button">
-                        Ver receita
-                    </a>
-
                 </div>
 
             </article>
 
+
+            <!-- ========================================
+                 RECEITA 2
+            ======================================== -->
 
             <article class="recipe-card">
 
                 <div class="recipe-image">
 
                     <video
+                        class="recipe-video"
                         src="/Site_Avigro_MVC/public/assets/videos/pãoliça.mp4"
-                        autoplay
-                        muted
-                        loop
-                        playsinline></video>
+                        preload="metadata"
+                        playsinline
+                        controls>
+                        Seu navegador não suporta vídeos.
+                    </video>
 
                 </div>
 
@@ -85,25 +93,27 @@
                         Uma receita especial para reunir a família.
                     </p>
 
-                    <a href="#" class="recipe-button">
-                        Ver receita
-                    </a>
-
                 </div>
 
             </article>
 
+
+            <!-- ========================================
+                 RECEITA 3
+            ======================================== -->
 
             <article class="recipe-card">
 
                 <div class="recipe-image">
 
                     <video
+                        class="recipe-video"
                         src="/Site_Avigro_MVC/public/assets/videos/sobrecoxa.mp4"
-                        autoplay
-                        muted
-                        loop
-                        playsinline></video>
+                        preload="metadata"
+                        playsinline
+                        controls>
+                        Seu navegador não suporta vídeos.
+                    </video>
 
                 </div>
 
@@ -121,13 +131,27 @@
                         Uma opção crocante e cheia de sabor.
                     </p>
 
-                    <a href="#" class="recipe-button">
-                        Ver receita
-                    </a>
-
                 </div>
 
             </article>
+
+        </div>
+
+
+        <!-- ========================================
+             BOTÃO — VER MAIS RECEITAS
+        ======================================== -->
+
+        <div class="recipes-more">
+
+            <a
+                href="/Site_Avigro_MVC/public/receitas"
+                class="recipe-more-button"
+            >
+                Ver mais receitas
+
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
 
         </div>
 

@@ -1,40 +1,26 @@
 /* ========================================
    CARROSSEL DE PRODUTOS — AVIGRO
-   MULTIPLOS CARROSSÉIS
-   ESTEIRA CONTÍNUA + CONTROLE MANUAL
+
+   - múltiplos carrosséis
+   - movimento automático
+   - loop infinito
+   - botões anterior/próximo
 ======================================== */
 
 document.addEventListener("DOMContentLoaded", function () {
-
-
-    /* ========================================
-       ENCONTRAR TODOS OS CARROSSÉIS
-    ======================================== */
 
     const carousels = document.querySelectorAll(
         ".products-carousel"
     );
 
 
-    if (carousels.length === 0) {
-
-        console.error(
-            "Nenhum carrossel de produtos encontrado."
-        );
-
+    if (!carousels.length) {
         return;
-
     }
 
 
-    console.log(
-        "Carrosséis encontrados:",
-        carousels.length
-    );
-
-
     /* ========================================
-       CONFIGURAÇÃO
+       VELOCIDADE AUTOMÁTICA
     ======================================== */
 
     const speed = 0.35;
@@ -44,63 +30,44 @@ document.addEventListener("DOMContentLoaded", function () {
        CONFIGURAR CADA CARROSSEL
     ======================================== */
 
-    carousels.forEach(function (carousel, index) {
-
+    carousels.forEach(function (carousel) {
 
         const track = carousel.querySelector(
             ".products-track"
         );
 
-
         const nextButton = carousel.querySelector(
             ".products-carousel-next"
         );
-
 
         const prevButton = carousel.querySelector(
             ".products-carousel-prev"
         );
 
 
-        /* ========================================
-           VERIFICAÇÃO
-        ======================================== */
-
         if (!track) {
-
-            console.error(
-                "Track não encontrado no carrossel:",
-                index + 1
-            );
-
             return;
-
         }
 
 
         /* ========================================
-           PRODUTOS ORIGINAIS
+           CARDS ORIGINAIS
         ======================================== */
 
         const originalCards = Array.from(
-            track.querySelectorAll(".product-card")
+            track.querySelectorAll(
+                ".product-card:not(.carousel-clone)"
+            )
         );
 
 
-        if (originalCards.length === 0) {
-
-            console.error(
-                "Nenhum produto encontrado no carrossel:",
-                index + 1
-            );
-
+        if (!originalCards.length) {
             return;
-
         }
 
 
         /* ========================================
-           DUPLICAR PRODUTOS
+           CRIAR CLONES
         ======================================== */
 
         originalCards.forEach(function (card) {
@@ -111,16 +78,30 @@ document.addEventListener("DOMContentLoaded", function () {
                 "carousel-clone"
             );
 
+            clone.setAttribute(
+                "aria-hidden",
+                "true"
+            );
+
             track.appendChild(clone);
 
         });
 
 
         /* ========================================
-           POSIÇÃO
+           POSIÇÃO ATUAL
         ======================================== */
 
         let position = 0;
+
+
+        /* ========================================
+           ESTADO DA ANIMAÇÃO
+        ======================================== */
+
+        let animationFrame = null;
+
+        let running = true;
 
 
         /* ========================================
@@ -129,8 +110,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
         function getCardWidth() {
 
-            const card =
-                track.querySelector(".product-card");
+            const card = track.querySelector(
+                ".product-card"
+            );
 
 
             if (!card) {
@@ -142,10 +124,14 @@ document.addEventListener("DOMContentLoaded", function () {
                 card.getBoundingClientRect().width;
 
 
+            const styles =
+                window.getComputedStyle(track);
+
+
             const gap =
-                parseFloat(
-                    window.getComputedStyle(track).gap
-                ) || 0;
+                parseFloat(styles.columnGap) ||
+                parseFloat(styles.gap) ||
+                0;
 
 
             return cardWidth + gap;
@@ -154,13 +140,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
         /* ========================================
-           LARGURA DA SEQUÊNCIA ORIGINAL
+           TAMANHO DA LISTA ORIGINAL
         ======================================== */
 
         function getLoopWidth() {
 
+            const cardWidth =
+                getCardWidth();
+
+
+            if (!cardWidth) {
+                return 0;
+            }
+
+
             return (
-                getCardWidth() *
+                cardWidth *
                 originalCards.length
             );
 
@@ -168,10 +163,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
         /* ========================================
-           ATUALIZAR POSIÇÃO
+           NORMALIZAR POSIÇÃO
         ======================================== */
 
-        function updatePosition() {
+        function normalizePosition() {
 
             const loopWidth =
                 getLoopWidth();
@@ -182,27 +177,25 @@ document.addEventListener("DOMContentLoaded", function () {
             }
 
 
-            /*
-             * Chegou ao final da primeira sequência
-             */
-
-            if (position >= loopWidth) {
-
+            while (position >= loopWidth) {
                 position -= loopWidth;
-
             }
 
 
-            /*
-             * Voltou antes do início
-             */
-
-            if (position < 0) {
-
+            while (position < 0) {
                 position += loopWidth;
-
             }
 
+        }
+
+
+        /* ========================================
+           ATUALIZAR POSIÇÃO
+        ======================================== */
+
+        function updatePosition() {
+
+            normalizePosition();
 
             track.scrollLeft = position;
 
@@ -210,16 +203,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
         /* ========================================
-           ESTEIRA CONTÍNUA
+           ANIMAÇÃO AUTOMÁTICA
         ======================================== */
 
         function animate() {
 
-            position += speed;
+            if (running) {
 
-            updatePosition();
+                position += speed;
 
-            requestAnimationFrame(animate);
+                updatePosition();
+
+            }
+
+
+            animationFrame =
+                requestAnimationFrame(
+                    animate
+                );
 
         }
 
@@ -239,16 +240,6 @@ document.addEventListener("DOMContentLoaded", function () {
             }
 
 
-            /*
-             * Move exatamente um produto.
-             *
-             * Não usamos scrollBy()
-             * nem behavior: smooth.
-             *
-             * Isso evita que vários cliques
-             * acumulem animações.
-             */
-
             position +=
                 distance * direction;
 
@@ -259,7 +250,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
         /* ========================================
-           PRÓXIMO
+           BOTÃO PRÓXIMO
         ======================================== */
 
         if (nextButton) {
@@ -279,7 +270,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
         /* ========================================
-           ANTERIOR
+           BOTÃO ANTERIOR
         ======================================== */
 
         if (prevButton) {
@@ -299,12 +290,76 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
         /* ========================================
-           REAJUSTAR APÓS REDIMENSIONAMENTO
+           PAUSAR AO PASSAR O MOUSE
+
+           Facilita a visualização dos produtos.
+        ======================================== */
+
+        carousel.addEventListener(
+            "mouseenter",
+            function () {
+
+                running = false;
+
+            }
+        );
+
+
+        carousel.addEventListener(
+            "mouseleave",
+            function () {
+
+                running = true;
+
+            }
+        );
+
+
+        /* ========================================
+           TOUCH / CELULAR
+        ======================================== */
+
+        track.addEventListener(
+            "touchstart",
+            function () {
+
+                running = false;
+
+            },
+            {
+                passive: true
+            }
+        );
+
+
+        track.addEventListener(
+            "touchend",
+            function () {
+
+                position =
+                    track.scrollLeft;
+
+                running = true;
+
+            },
+            {
+                passive: true
+            }
+        );
+
+
+        /* ========================================
+           REDIMENSIONAMENTO
         ======================================== */
 
         window.addEventListener(
             "resize",
             function () {
+
+                position =
+                    track.scrollLeft;
+
+                normalizePosition();
 
                 updatePosition();
 
@@ -313,17 +368,34 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
         /* ========================================
-           INICIAR
+           INICIALIZAR
         ======================================== */
 
-        console.log(
-            "Carrossel",
-            index + 1,
-            "iniciado."
-        );
+        track.scrollLeft = 0;
 
+        position = 0;
 
         animate();
+
+
+        /* ========================================
+           LIMPEZA
+        ======================================== */
+
+        window.addEventListener(
+            "beforeunload",
+            function () {
+
+                if (animationFrame) {
+
+                    cancelAnimationFrame(
+                        animationFrame
+                    );
+
+                }
+
+            }
+        );
 
     });
 

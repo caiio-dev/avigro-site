@@ -10,12 +10,10 @@
                 muted
                 loop
                 playsinline
-                preload="metadata"
-            >
+                preload="metadata">
                 <source
                     src="/Site_Avigro_MVC/public/assets/videos/fabrica01.mp4"
-                    type="video/mp4"
-                >
+                    type="video/mp4">
 
                 Seu navegador não suporta vídeos.
             </video>
@@ -29,13 +27,11 @@
                 QUEM SOMOS
             </span>
 
-
             <h2>
                 Tradição,
                 <br>
                 qualidade e inovação.
             </h2>
-
 
             <p>
                 A AVIGRO trabalha diariamente para levar
@@ -44,7 +40,6 @@
                 em cada etapa da produção.
             </p>
 
-
             <p>
                 Nossa trajetória é construída por pessoas,
                 processos e investimentos constantes,
@@ -52,9 +47,11 @@
                 necessidades dos nossos clientes.
             </p>
 
-
-            <a href="#historia" class="btn btn-primary">
+            <a
+                href="/Site_Avigro_MVC/public/index.php?route=empresa"
+                class="btn btn-primary">
                 Conheça nossa história
+                <i class="fa-solid fa-arrow-right"></i>
             </a>
 
         </div>

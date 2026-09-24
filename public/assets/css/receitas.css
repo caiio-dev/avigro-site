@@ -9,12 +9,15 @@
 }
 
 
+/* ========================================
+   CABEÇALHO
+======================================== */
+
 .recipes-header {
     max-width: 700px;
 
     margin-bottom: 60px;
 }
-
 
 .recipes-label {
     display: inline-block;
@@ -24,32 +27,32 @@
     color: #EB1E25;
 
     font-size: 14px;
-
     font-weight: 700;
-
     letter-spacing: 2px;
 }
 
-
 .recipes h2 {
-    margin-bottom: 20px;
+    margin: 0 0 20px;
 
     color: #EB1E25;
 
     font-size: clamp(38px, 4vw, 58px);
-
     line-height: 1.1;
 }
 
-
 .recipes-header p {
+    margin: 0;
+
     color: #555;
 
     font-size: 17px;
-
     line-height: 1.8;
 }
 
+
+/* ========================================
+   GRID
+======================================== */
 
 .recipes-grid {
     display: grid;
@@ -57,80 +60,101 @@
     grid-template-columns: repeat(3, 1fr);
 
     gap: 30px;
+
+    align-items: stretch;
 }
 
 
+/* ========================================
+   CARD
+======================================== */
+
 .recipe-card {
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+
     overflow: hidden;
 
     background: #EB1E25;
 
-    border-radius: 6px;
+    border-radius: 12px;
 
-    transition: transform 0.3s ease,
-                box-shadow 0.3s ease;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
 }
-
 
 .recipe-card:hover {
     transform: translateY(-8px);
 
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.12);
 }
 
 
+/* ========================================
+   ÁREA DO VÍDEO
+======================================== */
+
+/* ========================================
+   ÁREA DO VÍDEO
+======================================== */
+
 .recipe-image {
+    position: relative;
+
     width: 100%;
     height: 480px;
 
     overflow: hidden;
 
-    border-radius: 12px;
+    background: #000;
 }
 
-.recipe-image video {
+
+/* ========================================
+   VÍDEO
+======================================== */
+
+.recipe-video {
+    display: block;
+
     width: 100%;
     height: 100%;
 
     object-fit: cover;
+    object-position: center;
 
-    display: block;
+    background: #000;
 }
 
 
-.recipe-image img {
-    width: 100%;
-
-    height: 100%;
-
-    object-fit: cover;
-
-    display: block;
-
-    transition: transform 0.4s ease;
-}
-
-
-.recipe-card:hover .recipe-image img {
-    transform: scale(1.05);
-}
-
+/* ========================================
+   CONTEÚDO
+======================================== */
 
 .recipe-content {
+    display: flex;
+    flex-direction: column;
+
+    flex: 1;
+
     padding: 25px;
 }
 
-
 .recipe-category {
-    color: #EB1E25;
+    display: inline-block;
+
+    margin-bottom: 5px;
+
+    color: #F5CD58;
 
     font-size: 12px;
-
     font-weight: 700;
-
     letter-spacing: 1.5px;
 }
-
 
 .recipe-content h3 {
     margin: 10px 0;
@@ -138,22 +162,33 @@
     color: #F5CD58;
 
     font-size: 24px;
+    line-height: 1.2;
 }
 
-
 .recipe-content p {
-    margin-bottom: 20px;
+    margin: 0 0 20px;
 
     color: #FFFFFF;
 
     font-size: 15px;
-
     line-height: 1.6;
 }
 
 
+/* ========================================
+   BOTÃO
+======================================== */
+
 .recipe-button {
     display: inline-block;
+
+    align-self: flex-start;
+
+    /*
+       Mantém os três botões alinhados
+       na parte inferior dos cards.
+    */
+    margin-top: auto;
 
     padding: 10px 20px;
 
@@ -166,20 +201,25 @@
     border-radius: 3px;
 
     font-size: 14px;
-
     font-weight: 600;
 
-    transition: background 0.3s ease;
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
 }
-
 
 .recipe-button:hover {
     background: #F5CD58;
+
+    color: #EB1E25;
+
+    transform: translateY(-2px);
 }
 
 
 /* ========================================
-   RESPONSIVO
+   TABLET
 ======================================== */
 
 @media (max-width: 900px) {
@@ -195,14 +235,81 @@
 }
 
 
+/* ========================================
+   CELULAR
+======================================== */
+
 @media (max-width: 600px) {
 
     .recipes {
         padding: 60px 0;
     }
 
+    .recipes-header {
+        margin-bottom: 40px;
+    }
+
     .recipes-grid {
         grid-template-columns: 1fr;
     }
 
+    .recipe-content h3 {
+        font-size: 22px;
+    }
+
+}
+
+/* ========================================
+   VER MAIS RECEITAS
+======================================== */
+
+.recipes-more {
+    display: flex;
+    justify-content: center;
+
+    margin-top: 45px;
+}
+
+.recipe-more-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    padding: 14px 28px;
+
+    background: #EB1E25;
+    color: #FFFFFF;
+
+    border-radius: 6px;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.recipe-more-button:hover {
+    background: #F5CD58;
+    color: #EB1E25;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.recipe-more-button i {
+    transition: transform 0.3s ease;
+}
+
+.recipe-more-button:hover i {
+    transform: translateX(5px);
 }

@@ -30,6 +30,8 @@
 
     <link rel="stylesheet" href="/Site_Avigro_MVC/public/assets/css/about.css">
 
+    <link rel="stylesheet" href="/Site_Avigro_MVC/public/assets/css/empresa.css">
+
     <link rel="stylesheet" href="/Site_Avigro_MVC/public/assets/css/stats.css">
 
     <link rel="stylesheet" href="/Site_Avigro_MVC/public/assets/css/differentials.css">
