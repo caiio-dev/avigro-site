@@ -1,0 +1,752 @@
+/* ========================================
+   TRABALHE CONOSCO - AVIGRO
+======================================== */
+
+
+/* ========================================
+   HERO
+======================================== */
+
+.careers-hero {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    min-height: 520px;
+
+    padding: 150px 0 100px;
+
+    background: linear-gradient(
+        135deg,
+        #B9141B 0%,
+        #EB1E25 100%
+    );
+
+    overflow: hidden;
+}
+
+.careers-hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 430px;
+    height: 430px;
+
+    top: -180px;
+    right: -100px;
+
+    background: rgba(245, 205, 88, 0.12);
+
+    border-radius: 50%;
+}
+
+.careers-hero::after {
+    content: "";
+
+    position: absolute;
+
+    width: 280px;
+    height: 280px;
+
+    bottom: -160px;
+    left: -70px;
+
+    background: rgba(255, 255, 255, 0.06);
+
+    border-radius: 50%;
+}
+
+.careers-hero .container {
+    position: relative;
+
+    z-index: 2;
+}
+
+.careers-label {
+    display: inline-block;
+
+    margin-bottom: 15px;
+
+    color: #EB1E25;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.careers-hero .careers-label {
+    color: #F5CD58;
+}
+
+.careers-hero h1 {
+    max-width: 800px;
+
+    margin: 0 0 25px;
+
+    color: #FFFFFF;
+
+    font-size: clamp(44px, 5vw, 72px);
+    font-weight: 700;
+
+    line-height: 1.08;
+}
+
+.careers-hero p {
+    max-width: 650px;
+
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.88);
+
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+
+/* ========================================
+   INTRODUÇÃO
+======================================== */
+
+.careers-intro {
+    padding: 110px 0;
+
+    background: #FFFFFF;
+}
+
+.careers-intro-container {
+    display: grid;
+
+    grid-template-columns: 1.3fr 0.7fr;
+
+    align-items: center;
+
+    gap: 80px;
+}
+
+.careers-intro-content h2 {
+    margin: 0 0 25px;
+
+    color: #EB1E25;
+
+    font-size: clamp(38px, 4vw, 56px);
+    font-weight: 700;
+
+    line-height: 1.1;
+}
+
+.careers-intro-content p {
+    max-width: 700px;
+
+    margin: 0 0 18px;
+
+    color: #555555;
+
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+
+/* ========================================
+   ÍCONE
+======================================== */
+
+.careers-intro-icon {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-height: 320px;
+
+    background: #EEEDEB;
+
+    border-radius: 14px;
+}
+
+.careers-intro-icon i {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 130px;
+    height: 130px;
+
+    background: #EB1E25;
+
+    color: #F5CD58;
+
+    border-radius: 50%;
+
+    font-size: 55px;
+}
+
+
+/* ========================================
+   VAGAS
+======================================== */
+
+.careers-jobs {
+    padding: 110px 0;
+
+    background: #EEEDEB;
+}
+
+.careers-jobs-header {
+    max-width: 700px;
+
+    margin-bottom: 55px;
+}
+
+.careers-jobs-header h2 {
+    margin: 0 0 18px;
+
+    color: #EB1E25;
+
+    font-size: clamp(38px, 4vw, 56px);
+
+    line-height: 1.1;
+}
+
+.careers-jobs-header p {
+    margin: 0;
+
+    color: #555555;
+
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+
+/* ========================================
+   GRID DE VAGAS
+======================================== */
+
+.jobs-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 28px;
+
+    align-items: stretch;
+}
+
+
+/* ========================================
+   CARD DA VAGA
+======================================== */
+
+.job-card {
+    display: flex;
+    flex-direction: column;
+
+    padding: 30px;
+
+    background: #FFFFFF;
+
+    border-radius: 12px;
+
+    border-top: 5px solid #EB1E25;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.job-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.10);
+}
+
+
+/* ========================================
+   TOPO DO CARD
+======================================== */
+
+.job-card-top {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-bottom: 22px;
+}
+
+.job-department {
+    color: #EB1E25;
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: 1.3px;
+}
+
+.job-status {
+    padding: 6px 11px;
+
+    background: rgba(235, 30, 37, 0.08);
+
+    color: #EB1E25;
+
+    border-radius: 20px;
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+
+/* ========================================
+   TÍTULO
+======================================== */
+
+.job-card h3 {
+    margin: 0 0 18px;
+
+    color: #222222;
+
+    font-size: 23px;
+    line-height: 1.3;
+}
+
+
+/* ========================================
+   INFORMAÇÕES
+======================================== */
+
+.job-info {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 9px;
+
+    margin-bottom: 20px;
+}
+
+.job-info span {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: #666666;
+
+    font-size: 13px;
+}
+
+.job-info i {
+    width: 15px;
+
+    color: #EB1E25;
+}
+
+
+/* ========================================
+   DESCRIÇÃO
+======================================== */
+
+.job-card > p {
+    flex: 1;
+
+    margin: 0 0 25px;
+
+    color: #666666;
+
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+/* ========================================
+   BOTÃO
+======================================== */
+
+.job-button {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    align-self: flex-start;
+
+    gap: 10px;
+
+    padding: 12px 20px;
+
+    background: #EB1E25;
+
+    color: #FFFFFF;
+
+    border-radius: 6px;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.job-button:hover {
+    background: #F5CD58;
+
+    color: #EB1E25;
+
+    transform: translateY(-2px);
+}
+
+.job-button i {
+    transition: transform 0.3s ease;
+}
+
+.job-button:hover i {
+    transform: translateX(4px);
+}
+
+
+/* ========================================
+   AVISO
+======================================== */
+
+.careers-note {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 15px;
+
+    margin-top: 40px;
+
+    padding: 20px 25px;
+
+    background: #FFFFFF;
+
+    border-radius: 8px;
+}
+
+.careers-note i {
+    margin-top: 3px;
+
+    color: #EB1E25;
+
+    font-size: 18px;
+}
+
+.careers-note p {
+    margin: 0;
+
+    color: #666666;
+
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+
+/* ========================================
+   PÁGINA INDIVIDUAL DA VAGA
+======================================== */
+
+.job-page {
+    min-height: 100vh;
+
+    padding: 150px 0 100px;
+
+    background: #EEEDEB;
+}
+
+.job-back {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 40px;
+
+    color: #EB1E25;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    text-decoration: none;
+}
+
+.job-page-header {
+    padding: 45px;
+
+    background: #EB1E25;
+
+    border-radius: 14px;
+
+    margin-bottom: 40px;
+}
+
+.job-page-header .careers-label {
+    color: #F5CD58;
+}
+
+.job-page-header h1 {
+    margin: 0 0 25px;
+
+    color: #FFFFFF;
+
+    font-size: clamp(38px, 4vw, 55px);
+}
+
+.job-page-meta {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 25px;
+}
+
+.job-page-meta span {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: rgba(255, 255, 255, 0.85);
+
+    font-size: 14px;
+}
+
+.job-page-meta i {
+    color: #F5CD58;
+}
+
+
+/* ========================================
+   CONTEÚDO DA VAGA
+======================================== */
+
+.job-page-grid {
+    display: grid;
+
+    grid-template-columns: 1.6fr 0.7fr;
+
+    gap: 35px;
+
+    align-items: start;
+}
+
+.job-description {
+    padding: 40px;
+
+    background: #FFFFFF;
+
+    border-radius: 12px;
+}
+
+.job-description section {
+    margin-bottom: 40px;
+}
+
+.job-description section:last-child {
+    margin-bottom: 0;
+}
+
+.job-description h2 {
+    margin: 0 0 18px;
+
+    color: #EB1E25;
+
+    font-size: 25px;
+}
+
+.job-description p,
+.job-description li {
+    color: #555555;
+
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.job-description ul {
+    padding-left: 20px;
+}
+
+
+/* ========================================
+   CANDIDATURA
+======================================== */
+
+.job-apply {
+    position: sticky;
+
+    top: 110px;
+
+    padding: 30px;
+
+    background: #FFFFFF;
+
+    border-radius: 12px;
+}
+
+.job-apply h3 {
+    margin: 0 0 15px;
+
+    color: #EB1E25;
+
+    font-size: 22px;
+}
+
+.job-apply p {
+    margin: 0 0 25px;
+
+    color: #666666;
+
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.job-apply-button {
+    width: 100%;
+
+    padding: 14px 20px;
+
+    background: #EB1E25;
+
+    color: #FFFFFF;
+
+    border: 0;
+
+    border-radius: 6px;
+
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.job-apply-button:disabled {
+    opacity: 0.55;
+
+    cursor: not-allowed;
+}
+
+.job-apply > span {
+    display: block;
+
+    margin-top: 12px;
+
+    color: #888888;
+
+    font-size: 11px;
+
+    text-align: center;
+}
+
+
+/* ========================================
+   RESPONSIVO
+======================================== */
+
+@media (max-width: 1000px) {
+
+    .jobs-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .careers-intro-container {
+        grid-template-columns: 1fr 0.6fr;
+
+        gap: 50px;
+    }
+
+}
+
+
+@media (max-width: 800px) {
+
+    .careers-hero {
+        min-height: 450px;
+
+        padding: 130px 0 80px;
+    }
+
+    .careers-intro {
+        padding: 80px 0;
+    }
+
+    .careers-intro-container {
+        grid-template-columns: 1fr;
+    }
+
+    .careers-intro-icon {
+        min-height: 250px;
+    }
+
+    .careers-jobs {
+        padding: 80px 0;
+    }
+
+    .job-page-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .job-apply {
+        position: static;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .careers-hero {
+        min-height: auto;
+
+        padding: 120px 0 70px;
+    }
+
+    .careers-hero h1 {
+        font-size: 40px;
+    }
+
+    .careers-hero p {
+        font-size: 16px;
+    }
+
+    .careers-intro {
+        padding: 65px 0;
+    }
+
+    .careers-jobs {
+        padding: 65px 0;
+    }
+
+    .jobs-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .job-card {
+        padding: 25px;
+    }
+
+    .job-page {
+        padding: 120px 0 70px;
+    }
+
+    .job-page-header {
+        padding: 30px 25px;
+    }
+
+    .job-description {
+        padding: 28px 24px;
+    }
+
+}

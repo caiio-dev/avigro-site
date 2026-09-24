@@ -1,0 +1,332 @@
+/* ========================================
+   FOOTER - AVIGRO
+======================================== */
+
+.footer {
+    padding: 80px 0 0;
+
+    background: #B9141B;
+
+    color: #FFFFFF;
+}
+
+
+/* ========================================
+   GRID PRINCIPAL
+======================================== */
+
+.footer-grid {
+    display: grid;
+
+    /* Marca | Navegação | Contato | Mapa */
+    grid-template-columns: 1.2fr 0.7fr 1.1fr 1.5fr;
+
+    gap: 45px;
+
+    align-items: start;
+
+    padding-bottom: 60px;
+}
+
+
+/* ========================================
+   MARCA / LOGO
+======================================== */
+
+.footer-logo {
+    display: inline-block;
+
+    margin-bottom: 25px;
+}
+
+.footer-logo img {
+    display: block;
+
+    width: 125px;
+    height: auto;
+}
+
+
+/* ========================================
+   TEXTO DA MARCA
+======================================== */
+
+.footer-brand p {
+    max-width: 300px;
+
+    margin: 0 0 25px;
+
+    color: rgba(255, 255, 255, 0.80);
+
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+/* ========================================
+   REDES SOCIAIS
+======================================== */
+
+.footer-social {
+    display: flex;
+
+    gap: 12px;
+}
+
+.footer-social a {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 42px;
+    height: 42px;
+
+    background: rgba(255, 255, 255, 0.10);
+
+    color: #FFFFFF;
+
+    border-radius: 50%;
+
+    text-decoration: none;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.footer-social a:hover {
+    background: #F5CD58;
+
+    color: #EB1E25;
+
+    transform: translateY(-4px);
+}
+
+
+/* ========================================
+   COLUNAS
+======================================== */
+
+.footer-column h3 {
+    margin: 0 0 25px;
+
+    color: #F5CD58;
+
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.footer-column ul {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.footer-column li {
+    margin-bottom: 13px;
+}
+
+
+/* ========================================
+   LINKS
+======================================== */
+
+.footer-column a {
+    color: rgba(255, 255, 255, 0.80);
+
+    font-size: 14px;
+
+    text-decoration: none;
+
+    transition: color 0.3s ease;
+}
+
+.footer-column a:hover {
+    color: #F5CD58;
+}
+
+
+/* ========================================
+   CONTATO
+======================================== */
+
+.footer-contact li {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 12px;
+
+    color: rgba(255, 255, 255, 0.80);
+
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.footer-contact i {
+    flex-shrink: 0;
+
+    width: 18px;
+
+    margin-top: 4px;
+
+    color: #F5CD58;
+}
+
+
+/* ========================================
+   LINKS DE TELEFONE / E-MAIL
+======================================== */
+
+.footer-contact a {
+    color: rgba(255, 255, 255, 0.80);
+
+    font-size: 14px;
+
+    text-decoration: none;
+
+    transition: color 0.3s ease;
+}
+
+.footer-contact a:hover {
+    color: #F5CD58;
+}
+
+
+/* ========================================
+   MAPA
+======================================== */
+
+.footer-map {
+    width: 100%;
+
+    overflow: hidden;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    border: 1px solid rgba(255, 255, 255, 0.10);
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.footer-map iframe {
+    display: block;
+
+    width: 100%;
+
+    /* MAPA MAIOR */
+    height: 280px;
+
+    border: 0;
+}
+
+
+/* ========================================
+   RODAPÉ INFERIOR
+======================================== */
+
+.footer-bottom {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 25px 0;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.footer-bottom p {
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.65);
+
+    font-size: 12px;
+}
+
+
+/* ========================================
+   RESPONSIVO - NOTEBOOK / TABLET
+======================================== */
+
+@media (max-width: 1100px) {
+
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 50px;
+    }
+
+    .footer-map iframe {
+        height: 280px;
+    }
+
+}
+
+
+/* ========================================
+   RESPONSIVO - TABLET
+======================================== */
+
+@media (max-width: 768px) {
+
+    .footer {
+        padding-top: 65px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+    }
+
+    .footer-brand p {
+        max-width: 450px;
+    }
+
+    .footer-map iframe {
+        height: 300px;
+    }
+
+}
+
+
+/* ========================================
+   RESPONSIVO - CELULAR
+======================================== */
+
+@media (max-width: 600px) {
+
+    .footer {
+        padding-top: 55px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+
+        padding-bottom: 45px;
+    }
+
+    .footer-map iframe {
+        height: 260px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        padding: 22px 0;
+    }
+
+}

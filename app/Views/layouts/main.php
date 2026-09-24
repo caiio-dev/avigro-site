@@ -42,6 +42,10 @@
 
     <link rel="stylesheet" href="/Site_Avigro_MVC/public/assets/css/products.css">
 
+    <link rel="stylesheet" href="/Site_Avigro_MVC/public/assets/css/footer.css">
+
+    <link rel="stylesheet" href="/Site_Avigro_MVC/public/assets/css/carreiras.css">
+
 
 
 
