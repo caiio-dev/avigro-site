@@ -27,6 +27,7 @@
     overflow: hidden;
 }
 
+
 .products-page-hero::before {
     content: "";
 
@@ -42,6 +43,7 @@
 
     border-radius: 50%;
 }
+
 
 .products-page-hero::after {
     content: "";
@@ -59,11 +61,13 @@
     border-radius: 50%;
 }
 
+
 .products-page-hero .container {
     position: relative;
 
     z-index: 2;
 }
+
 
 .products-page-label {
     display: inline-block;
@@ -78,9 +82,11 @@
     letter-spacing: 2px;
 }
 
+
 .products-page-hero .products-page-label {
     color: #F5CD58;
 }
+
 
 .products-page-hero h1 {
     max-width: 850px;
@@ -94,6 +100,7 @@
 
     line-height: 1.08;
 }
+
 
 .products-page-hero p {
     max-width: 650px;
@@ -117,11 +124,13 @@
     background: #FFFFFF;
 }
 
+
 .products-catalog-header {
     max-width: 720px;
 
     margin-bottom: 42px;
 }
+
 
 .products-catalog-header h2 {
     margin: 0 0 18px;
@@ -132,6 +141,7 @@
 
     line-height: 1.1;
 }
+
 
 .products-catalog-header p {
     margin: 0;
@@ -157,6 +167,7 @@
     margin-bottom: 50px;
 }
 
+
 .product-filter {
     padding: 12px 22px;
 
@@ -181,6 +192,7 @@
         box-shadow 0.3s ease;
 }
 
+
 .product-filter:hover {
     background: #F5CD58;
 
@@ -188,6 +200,7 @@
 
     transform: translateY(-2px);
 }
+
 
 .product-filter.active {
     background: #EB1E25;
@@ -219,6 +232,8 @@
 ======================================== */
 
 .product-page-card {
+    position: relative;
+
     display: flex;
     flex-direction: column;
 
@@ -260,6 +275,44 @@
 
 
 /* ========================================
+   BRILHO PASSANDO NO CARD
+======================================== */
+
+.product-page-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -130%;
+
+    width: 55%;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            120deg,
+            transparent,
+            rgba(255, 255, 255, 0.25),
+            transparent
+        );
+
+    transform: skewX(-20deg);
+
+    transition: left 0.75s ease;
+
+    z-index: 5;
+
+    pointer-events: none;
+}
+
+
+.product-page-card:hover::before {
+    left: 140%;
+}
+
+
+/* ========================================
    CARD ESCONDIDO PELO FILTRO
 ======================================== */
 
@@ -290,6 +343,7 @@
     overflow: hidden;
 }
 
+
 .product-page-image img {
     display: block;
 
@@ -302,6 +356,7 @@
         transform 0.45s ease,
         filter 0.45s ease;
 }
+
 
 .product-page-card:hover .product-page-image img {
     transform: scale(1.08);
@@ -321,6 +376,7 @@
     padding: 27px;
 }
 
+
 .product-page-category {
     display: inline-block;
 
@@ -334,6 +390,7 @@
     letter-spacing: 1.5px;
 }
 
+
 .product-page-content h3 {
     margin: 0 0 12px;
 
@@ -343,13 +400,19 @@
 
     line-height: 1.25;
 
-    transition: color 0.3s ease;
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
 }
+
 
 .product-page-card:hover
 .product-page-content h3 {
     color: #EB1E25;
+
+    transform: translateX(3px);
 }
+
 
 .product-page-content p {
     flex: 1;
@@ -397,6 +460,7 @@
         box-shadow 0.3s ease;
 }
 
+
 .product-page-button:hover {
     background: #F5CD58;
 
@@ -408,9 +472,11 @@
         0 8px 18px rgba(0, 0, 0, 0.10);
 }
 
+
 .product-page-button i {
     transition: transform 0.3s ease;
 }
+
 
 .product-page-button:hover i {
     transform: translateX(5px);
@@ -429,6 +495,7 @@
     background: #EEEDEB;
 }
 
+
 .product-back {
     display: inline-flex;
 
@@ -445,6 +512,7 @@
 
     text-decoration: none;
 }
+
 
 .product-back:hover {
     color: #B9141B;
@@ -488,6 +556,7 @@
         0 15px 35px rgba(0, 0, 0, 0.06);
 }
 
+
 .product-detail-image img {
     display: block;
 
@@ -508,6 +577,7 @@
     padding-top: 15px;
 }
 
+
 .product-detail-content h1 {
     margin: 5px 0 25px;
 
@@ -517,6 +587,7 @@
 
     line-height: 1.1;
 }
+
 
 .product-detail-description {
     margin: 0 0 35px;
@@ -540,6 +611,7 @@
     gap: 15px;
 }
 
+
 .product-spec-item {
     padding: 20px;
 
@@ -549,6 +621,7 @@
 
     border-left: 4px solid #EB1E25;
 }
+
 
 .product-spec-item span {
     display: block;
@@ -565,6 +638,7 @@
     text-transform: uppercase;
 }
 
+
 .product-spec-item strong {
     color: #333333;
 
@@ -575,14 +649,119 @@
 
 
 /* ========================================
-   RESPONSIVO
+   INFORMAÇÕES ADICIONAIS PRODUTO
+======================================== */
+
+.product-more-info {
+    margin-top: 30px;
+
+    padding: 25px;
+
+    background: #FFFFFF;
+
+    border-radius: 10px;
+}
+
+
+.product-more-info h2 {
+    margin: 0 0 10px;
+
+    color: #EB1E25;
+
+    font-size: 22px;
+}
+
+
+.product-more-info p {
+    margin: 0;
+
+    color: #666666;
+
+    line-height: 1.8;
+}
+
+
+/* ========================================
+   AVISO
+======================================== */
+
+.product-update-notice {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 20px;
+
+    padding: 15px 18px;
+
+    background: #F5CD58;
+
+    border-radius: 8px;
+
+    color: #B9141B;
+}
+
+
+.product-update-notice i {
+    font-size: 20px;
+}
+
+
+.product-update-notice p {
+    margin: 0;
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+/* ========================================
+   PRODUTO NÃO ENCONTRADO
+======================================== */
+
+.product-not-found {
+    padding: 80px 30px;
+
+    border-radius: 15px;
+
+    background: #FFFFFF;
+
+    text-align: center;
+}
+
+
+.product-not-found i {
+    color: #EB1E25;
+
+    font-size: 55px;
+}
+
+
+.product-not-found h1 {
+    margin: 20px 0 10px;
+
+    color: #EB1E25;
+}
+
+
+.product-not-found p {
+    color: #666666;
+}
+
+
+/* ========================================
+   RESPONSIVO - TABLET
 ======================================== */
 
 @media (max-width: 1050px) {
 
     .products-page-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
     }
+
 
     .product-detail-grid {
         gap: 40px;
@@ -590,6 +769,10 @@
 
 }
 
+
+/* ========================================
+   RESPONSIVO
+======================================== */
 
 @media (max-width: 800px) {
 
@@ -599,17 +782,21 @@
         padding: 130px 0 80px;
     }
 
+
     .products-catalog {
         padding: 80px 0;
     }
+
 
     .product-detail {
         padding: 130px 0 80px;
     }
 
+
     .product-detail-grid {
         grid-template-columns: 1fr;
     }
+
 
     .product-detail-image {
         min-height: 450px;
@@ -617,6 +804,10 @@
 
 }
 
+
+/* ========================================
+   MOBILE
+======================================== */
 
 @media (max-width: 600px) {
 
@@ -626,21 +817,26 @@
         padding: 120px 0 70px;
     }
 
+
     .products-page-hero h1 {
         font-size: 40px;
     }
+
 
     .products-page-hero p {
         font-size: 16px;
     }
 
+
     .products-catalog {
         padding: 65px 0;
     }
 
+
     .products-filters {
         gap: 8px;
     }
+
 
     .product-filter {
         padding: 10px 16px;
@@ -648,17 +844,21 @@
         font-size: 12px;
     }
 
+
     .products-page-grid {
         grid-template-columns: 1fr;
     }
+
 
     .product-page-image {
         height: 320px;
     }
 
+
     .product-detail {
         padding: 120px 0 65px;
     }
+
 
     .product-detail-image {
         min-height: 350px;
@@ -666,8 +866,55 @@
         padding: 30px;
     }
 
+
     .product-specifications {
         grid-template-columns: 1fr;
+    }
+
+
+    /* EFEITOS MAIS SUAVES NO CELULAR */
+
+    .product-page-card:hover {
+        transform: translateY(-5px);
+    }
+
+
+    .product-page-card:hover
+    .product-page-image img {
+        transform: scale(1.04);
+    }
+
+}
+
+
+/* ========================================
+   ACESSIBILIDADE
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .product-page-card,
+    .product-page-image img,
+    .product-page-button,
+    .product-page-button i,
+    .product-filter {
+        transition: none;
+    }
+
+
+    .product-page-card::before {
+        display: none;
+    }
+
+
+    .product-page-card:hover {
+        transform: none;
+    }
+
+
+    .product-page-card:hover
+    .product-page-image img {
+        transform: none;
     }
 
 }

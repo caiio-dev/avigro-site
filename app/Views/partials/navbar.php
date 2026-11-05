@@ -34,14 +34,14 @@
                 </li>
 
                 <li>
-                    <a href="/Site_Avigro_MVC/public/#receitas">
+                    <a href="/Site_Avigro_MVC/public/index.php?route=receitas">
                         Receitas
                     </a>
                 </li>
 
                 <li>
-                    <a href="#">
-                        Notícias
+                    <a href="/Site_Avigro_MVC/public/index.php?route=social">
+                        Social
                     </a>
                 </li>
 

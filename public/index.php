@@ -4,94 +4,82 @@ error_reporting(E_ALL);
 ini_set('display_errors', '1');
 
 
-/* ========================================
-   ARQUIVOS PRINCIPAIS
-======================================== */
-
 require_once __DIR__ . '/../app/Core/Router.php';
 
 require_once __DIR__ . '/../app/Controllers/HomeController.php';
 require_once __DIR__ . '/../app/Controllers/EmpresaController.php';
 require_once __DIR__ . '/../app/Controllers/CarreirasController.php';
 require_once __DIR__ . '/../app/Controllers/ProdutosController.php';
-
-
-/* ========================================
-   ROUTER
-======================================== */
+require_once __DIR__ . '/../app/Controllers/ReceitasController.php';
+require_once __DIR__ . '/../app/Controllers/SocialController.php';
 
 $router = new Router();
 
 
-/* ========================================
-   CONTROLLERS
-======================================== */
-
 $homeController = new HomeController();
-
 $empresaController = new EmpresaController();
-
 $carreirasController = new CarreirasController();
-
 $produtosController = new ProdutosController();
-
+$receitasController = new ReceitasController();
+$socialController = new SocialController();
 
 /* ========================================
-   ROTAS
+   HOME
 ======================================== */
-
-
-/* HOME */
 
 $router->get('/', function () use ($homeController) {
-
     $homeController->index();
-
 });
 
 
-/* EMPRESA */
+/* ========================================
+   EMPRESA
+======================================== */
 
 $router->get('/empresa', function () use ($empresaController) {
-
     $empresaController->index();
-
 });
 
 
-/* TRABALHE CONOSCO */
+/* ========================================
+   TRABALHE CONOSCO
+======================================== */
 
 $router->get('/trabalhe-conosco', function () use ($carreirasController) {
-
     $carreirasController->index();
-
 });
 
-
-/* VAGA INDIVIDUAL */
 
 $router->get('/vaga', function () use ($carreirasController) {
-
     $carreirasController->vaga();
-
 });
 
 
-/* PRODUTOS */
+/* ========================================
+   PRODUTOS
+======================================== */
 
 $router->get('/produtos', function () use ($produtosController) {
-
     $produtosController->index();
-
 });
 
 
-/* PRODUTO INDIVIDUAL */
-
 $router->get('/produto', function () use ($produtosController) {
-
     $produtosController->produto();
+});
 
+
+/* ========================================
+   RECEITAS
+======================================== */
+
+$router->get('/receitas', function () use ($receitasController) {
+    $receitasController->index();
+});
+
+
+$router->get('/receita', function () use ($receitasController) {
+    $receitasController->receita();
 });
 
 
@@ -101,17 +89,24 @@ $router->get('/produto', function () use ($produtosController) {
 
 $route = $_GET['route'] ?? '/';
 
-
 if ($route !== '/') {
-
     $route = '/' . trim($route, '/');
-
 }
 
 
 /* ========================================
-   EXECUTA A ROTA
+   EXECUTA
 ======================================== */
+
+
+$router->get('/social', function () use ($socialController) {
+    $socialController->index();
+});
+
+$router->get('/acao-social', function () use ($socialController) {
+    $socialController->acao();
+});
+
 
 $router->dispatch(
     $route,

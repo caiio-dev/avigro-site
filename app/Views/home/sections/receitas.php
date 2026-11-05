@@ -145,7 +145,7 @@
         <div class="recipes-more">
 
             <a
-                href="/Site_Avigro_MVC/public/receitas"
+                href="/Site_Avigro_MVC/public/index.php?route=receitas"
                 class="recipe-more-button">
                 Ver mais receitas
 

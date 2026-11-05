@@ -184,11 +184,10 @@
 
 
                 <a
-                    href="#produtos"
-                    class="btn btn-primary">
+                    href="/Site_Avigro_MVC/public/index.php?route=produtos"
+                    class="chicken-map-button">
                     Ver produtos
                 </a>
-
             </div>
 
         </div>
@@ -218,7 +217,7 @@
                 <div class="cut-card-image">
 
                     <img
-                        src="/Site_Avigro_MVC/public/assets/images/cortes/peito.png"
+                        src="/Site_Avigro_MVC/public/assets/images/cortes/peito cortado.png"
                         alt="Peito de frango">
 
                 </div>
@@ -240,7 +239,7 @@
                 <div class="cut-card-image">
 
                     <img
-                        src="/Site_Avigro_MVC/public/assets/images/cortes/asa.png"
+                        src="/Site_Avigro_MVC/public/assets/images/cortes/asa cortada.png"
                         alt="Asa de frango">
 
                 </div>
@@ -262,7 +261,7 @@
                 <div class="cut-card-image">
 
                     <img
-                        src="/Site_Avigro_MVC/public/assets/images/cortes/sobrecoxa.png"
+                        src="/Site_Avigro_MVC/public/assets/images/cortes/sobrecoxa cortada.png"
                         alt="Sobrecoxa de frango">
 
                 </div>
@@ -284,7 +283,7 @@
                 <div class="cut-card-image">
 
                     <img
-                        src="/Site_Avigro_MVC/public/assets/images/cortes/coxa.png"
+                        src="/Site_Avigro_MVC/public/assets/images/cortes/coxa cortada.png"
                         alt="Coxa de frango">
 
                 </div>
@@ -306,7 +305,7 @@
                 <div class="cut-card-image">
 
                     <img
-                        src="/Site_Avigro_MVC/public/assets/images/cortes/frango.png"
+                        src="/Site_Avigro_MVC/public/assets/images/cortes/frango congelado ct.png"
                         alt="Carcaça de frango">
 
                 </div>

@@ -6,13 +6,14 @@ ob_start();
 
 ?>
 
+
 <!-- ========================================
      HERO
 ======================================== -->
 
 <section class="careers-hero">
 
-    <div class="container reveal">
+    <div class="container">
 
         <span class="careers-label">
             TRABALHE CONOSCO
@@ -23,8 +24,8 @@ ob_start();
         </h1>
 
         <p>
-            Conheça as oportunidades disponíveis e descubra
-            como fazer parte do time AVIGRO.
+            Conheça nossas oportunidades e venha
+            construir novos caminhos com a AVIGRO.
         </p>
 
     </div>
@@ -38,12 +39,13 @@ ob_start();
 
 <section class="careers-intro">
 
-    <div class="container careers-intro-container">
+    <div class="container careers-intro-grid">
+
 
         <div class="careers-intro-content">
 
             <span class="careers-label">
-                OPORTUNIDADES
+                CARREIRAS
             </span>
 
             <h2>
@@ -51,21 +53,29 @@ ob_start();
             </h2>
 
             <p>
-                A AVIGRO acredita que o crescimento da empresa
-                acontece junto com o desenvolvimento das pessoas.
+                Na AVIGRO, acreditamos que bons resultados
+                são construídos por pessoas comprometidas,
+                responsáveis e dispostas a crescer juntas.
             </p>
 
             <p>
-                Nesta página você poderá acompanhar as vagas
-                disponíveis e encontrar oportunidades para fazer
-                parte da nossa equipe.
+                Confira abaixo as oportunidades disponíveis
+                e encontre a vaga que combina com você.
             </p>
 
         </div>
 
+
         <div class="careers-intro-icon">
-            <i class="fa-solid fa-users"></i>
+
+            <i class="fa-solid fa-people-group"></i>
+
+            <span>
+                AVIGRO
+            </span>
+
         </div>
+
 
     </div>
 
@@ -73,189 +83,237 @@ ob_start();
 
 
 <!-- ========================================
-     VAGAS ABERTAS
+     VAGAS
 ======================================== -->
 
 <section class="careers-jobs">
 
     <div class="container">
 
-        <div class="careers-jobs-header">
+
+        <div class="careers-section-header">
 
             <span class="careers-label">
-                VAGAS ABERTAS
+                OPORTUNIDADES
             </span>
 
             <h2>
-                Encontre uma oportunidade
+                Vagas disponíveis
             </h2>
 
             <p>
-                Confira algumas oportunidades disponíveis.
+                Confira as oportunidades abertas
+                atualmente na AVIGRO.
             </p>
 
         </div>
 
 
-        <div class="jobs-grid">
+        <?php if (empty($vagas)): ?>
 
-            <!-- VAGA 1 -->
 
-            <article class="job-card">
+            <!-- ========================================
+                 SEM VAGAS
+            ======================================== -->
 
-                <div class="job-card-top">
+            <div class="careers-empty">
 
-                    <span class="job-department">
-                        PRODUÇÃO
-                    </span>
+                <div class="careers-empty-icon">
 
-                    <span class="job-status">
-                        Aberta
-                    </span>
+                    <i class="fa-solid fa-briefcase"></i>
 
                 </div>
 
                 <h3>
-                    Auxiliar de Produção
+                    Nenhuma vaga disponível no momento
                 </h3>
 
-                <div class="job-info">
-
-                    <span>
-                        <i class="fa-solid fa-location-dot"></i>
-                        Conceição da Feira - BA
-                    </span>
-
-                    <span>
-                        <i class="fa-solid fa-building"></i>
-                        Presencial
-                    </span>
-
-                </div>
-
                 <p>
-                    Oportunidade para fazer parte da equipe
-                    de produção da AVIGRO.
+                    Novas oportunidades serão publicadas
+                    nesta página assim que estiverem disponíveis.
                 </p>
 
-                <a
-                    href="/Site_Avigro_MVC/public/index.php?route=vaga"
-                    class="job-button">
-                    Ver vaga
-                    <i class="fa-solid fa-arrow-right"></i>
-                </a>
+                <span class="careers-empty-message">
 
-            </article>
+                    Acompanhe nosso site para conferir
+                    futuras oportunidades.
+
+                </span>
+
+            </div>
 
 
-            <!-- VAGA 2 -->
+        <?php else: ?>
 
-            <article class="job-card">
 
-                <div class="job-card-top">
+            <!-- ========================================
+                 GRID DE VAGAS
+            ======================================== -->
 
-                    <span class="job-department">
-                        ADMINISTRATIVO
-                    </span>
+            <div class="careers-grid">
 
-                    <span class="job-status">
-                        Aberta
-                    </span>
 
-                </div>
+                <?php foreach ($vagas as $vaga): ?>
 
-                <h3>
-                    Assistente Administrativo
-                </h3>
 
-                <div class="job-info">
+                    <article class="career-card">
 
-                    <span>
-                        <i class="fa-solid fa-location-dot"></i>
-                        Conceição da Feira - BA
-                    </span>
 
-                    <span>
-                        <i class="fa-solid fa-building"></i>
-                        Presencial
-                    </span>
+                        <div class="career-card-top">
 
-                </div>
+
+                            <div class="career-card-icon">
+
+                                <i class="fa-solid fa-briefcase"></i>
+
+                            </div>
+
+
+                            <span class="career-card-sector">
+
+                                <?= htmlspecialchars(
+                                    $vaga['setor'],
+                                    ENT_QUOTES,
+                                    'UTF-8'
+                                ) ?>
+
+                            </span>
+
+
+                        </div>
+
+
+                        <h3>
+
+                            <?= htmlspecialchars(
+                                $vaga['titulo'],
+                                ENT_QUOTES,
+                                'UTF-8'
+                            ) ?>
+
+                        </h3>
+
+
+                        <p>
+
+                            <?= htmlspecialchars(
+                                $vaga['resumo'],
+                                ENT_QUOTES,
+                                'UTF-8'
+                            ) ?>
+
+                        </p>
+
+
+                        <div class="career-card-info">
+
+
+                            <span>
+
+                                <i class="fa-solid fa-location-dot"></i>
+
+                                <?= htmlspecialchars(
+                                    $vaga['local'],
+                                    ENT_QUOTES,
+                                    'UTF-8'
+                                ) ?>
+
+                            </span>
+
+
+                            <span>
+
+                                <i class="fa-solid fa-building"></i>
+
+                                <?= htmlspecialchars(
+                                    $vaga['tipo'],
+                                    ENT_QUOTES,
+                                    'UTF-8'
+                                ) ?>
+
+                            </span>
+
+
+                            <span>
+
+                                <i class="fa-solid fa-file-contract"></i>
+
+                                <?= htmlspecialchars(
+                                    $vaga['contrato'],
+                                    ENT_QUOTES,
+                                    'UTF-8'
+                                ) ?>
+
+                            </span>
+
+
+                        </div>
+
+
+                        <a
+                            href="/Site_Avigro_MVC/public/index.php?route=vaga&amp;id=<?= urlencode($vaga['id']) ?>"
+                            class="career-button"
+                        >
+
+                            Ver oportunidade
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+
+                    </article>
+
+
+                <?php endforeach; ?>
+
+
+            </div>
+
+
+        <?php endif; ?>
+
+
+    </div>
+
+</section>
+
+
+<!-- ========================================
+     BANCO DE TALENTOS
+======================================== -->
+
+<section class="careers-talent">
+
+    <div class="container">
+
+        <div class="careers-talent-box">
+
+
+            <div>
+
+                <span class="careers-label">
+                    BANCO DE TALENTOS
+                </span>
+
+                <h2>
+                    Não encontrou uma oportunidade?
+                </h2>
 
                 <p>
-                    Oportunidade para atuação em atividades
-                    administrativas da empresa.
+                    Em breve disponibilizaremos também
+                    nosso banco de talentos para futuras oportunidades.
                 </p>
 
-                <a
-                    href="/Site_Avigro_MVC/public/index.php?route=vaga"
-                    class="job-button">
-                    Ver vaga
-                    <i class="fa-solid fa-arrow-right"></i>
-                </a>
-
-            </article>
+            </div>
 
 
-            <!-- VAGA 3 -->
+            <div class="careers-talent-icon">
 
-            <article class="job-card">
+                <i class="fa-solid fa-address-card"></i>
 
-                <div class="job-card-top">
+            </div>
 
-                    <span class="job-department">
-                        TECNOLOGIA
-                    </span>
-
-                    <span class="job-status">
-                        Aberta
-                    </span>
-
-                </div>
-
-                <h3>
-                    Oportunidade em TI
-                </h3>
-
-                <div class="job-info">
-
-                    <span>
-                        <i class="fa-solid fa-location-dot"></i>
-                        Conceição da Feira - BA
-                    </span>
-
-                    <span>
-                        <i class="fa-solid fa-building"></i>
-                        Presencial
-                    </span>
-
-                </div>
-
-                <p>
-                    Faça parte da área de tecnologia
-                    e ajude a construir novas soluções.
-                </p>
-
-                <a
-                    href="/Site_Avigro_MVC/public/index.php?route=vaga"
-                    class="job-button">
-                    Ver vaga
-                    <i class="fa-solid fa-arrow-right"></i>
-                </a>
-
-            </article>
-
-        </div>
-
-
-        <div class="careers-note">
-
-            <i class="fa-solid fa-circle-info"></i>
-
-            <p>
-                As vagas exibidas nesta página são demonstrativas.
-                Depois elas serão cadastradas pela área administrativa.
-            </p>
 
         </div>
 

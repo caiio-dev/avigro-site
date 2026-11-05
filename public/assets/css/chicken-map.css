@@ -636,7 +636,7 @@
 
     padding: 25px;
 
-    background: #EB1E25;
+    background: #F5CD58;
 
     border-radius: 20px;
 
@@ -654,7 +654,7 @@
 
     align-items: center;
 
-    color: #F5CD58;
+    color: #EB1E25;
 
     font-size: 13px;
 
@@ -680,7 +680,7 @@
     width: 90px;
     height: 4px;
 
-    background: #F5CD58;
+    background: #EB1E25;
 
     border-radius: 10px;
 }
@@ -697,7 +697,7 @@
 
     border-radius: 14px;
 
-    background: #F5CD58;
+    background: #EB1E25;
 
     font-family: inherit;
 
@@ -738,7 +738,7 @@
 
     border-radius: 10px;
 
-    background: #F5CD58;
+    background: #EB1E25;
 }
 
 .cut-card-image img {
@@ -763,7 +763,7 @@
 .cut-card strong {
     display: block;
 
-    color: #EB1E25;
+    color: #F5CD58;
 
     font-size: 14px;
 }
@@ -942,4 +942,55 @@
     .cut-card-image {
         height: 85px;
     }
+}
+
+/* ========================================
+   BOTÃO VER PRODUTOS
+======================================== */
+
+.chicken-map-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 28px;
+
+    padding: 16px 38px;
+
+    background: #F5CD58;
+
+    color: #EB1E25;
+
+    border-radius: 40px;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.chicken-map-button:hover {
+    background: #ffffff;
+
+    color: #EB1E25;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 25px
+        rgba(0, 0, 0, 0.15);
+}
+
+
+.chicken-map-button:active {
+    transform: translateY(0);
 }

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -84,7 +85,15 @@
 
     <link
         rel="stylesheet"
+        href="/Site_Avigro_MVC/public/assets/css/receitas-page.css">
+
+    <link
+        rel="stylesheet"
         href="/Site_Avigro_MVC/public/assets/css/products.css">
+
+    <link
+        rel="stylesheet"
+        href="/Site_Avigro_MVC/public/assets/css/social.css">
 
 
     <!-- ========================================
@@ -161,24 +170,45 @@
     ======================================== -->
 
     <script
-        src="/Site_Avigro_MVC/public/assets/js/chicken-map.js?v=2"></script>
+        src="/Site_Avigro_MVC/public/assets/js/chicken-map.js?v=2">
+    </script>
 
 
     <script
-        src="/Site_Avigro_MVC/public/assets/js/navbar.js"></script>
+        src="/Site_Avigro_MVC/public/assets/js/navbar.js">
+    </script>
 
 
     <script
-        src="/Site_Avigro_MVC/public/assets/js/products.js"></script>
+        src="/Site_Avigro_MVC/public/assets/js/products.js">
+    </script>
 
 
-    <!-- ANIMAÇÕES -->
+    <!-- ========================================
+         ANIMAÇÕES
+    ======================================== -->
 
     <script
-        src="/Site_Avigro_MVC/public/assets/js/animations.js"></script>
+        src="/Site_Avigro_MVC/public/assets/js/animations.js">
+    </script>
+
+
+    <!-- ========================================
+         PRODUTOS
+    ======================================== -->
 
     <script
-        src="/Site_Avigro_MVC/public/assets/js/produtos-page.js"></script>
+        src="/Site_Avigro_MVC/public/assets/js/produtos-page.js">
+    </script>
+
+
+    <!-- ========================================
+         RECEITAS
+    ======================================== -->
+
+    <script
+        src="/Site_Avigro_MVC/public/assets/js/receitas-page.js">
+    </script>
 
 
 </body>
